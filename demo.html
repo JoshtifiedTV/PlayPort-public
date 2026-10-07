@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlayPort demo: a simulated panel you can click around</title>
+<meta name="description" content="An interactive, simulated PlayPort panel. Click through the dashboard, game servers, console, websites and backups without installing anything.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/wordmark-transparent.svg" alt="PlayPort"></a>
+    <nav class="links">
+      <a class="link" href="index.html">Home</a>
+      <a class="link" href="index.html#features">Features</a>
+      <a class="link" href="docs/">Manual</a>
+      <a class="dl-btn" href="download/PlayPort.exe" download>Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:8px">
+    <div class="eyebrow">Interactive demo</div>
+    <h1 style="font-size:clamp(32px,5vw,54px)">A panel you can click</h1>
+    <p class="lead">This is a simulated PlayPort panel running in your browser. Nothing is installed and no servers are real. Click through the screens exactly as you would in the app.</p>
+    <div class="note">
+      <p style="margin:0"><strong>Simulated.</strong> The numbers, servers and websites below are made up for the demo. In the real app they are your own.</p>
+    </div>
+  </section>
+
+  <div class="demo-steps" id="steps">
+    <button data-step="0" class="active">1. The dashboard</button>
+    <button data-step="1">2. Create a server</button>
+    <button data-step="2">3. Watch the console</button>
+    <button data-step="3">4. Host a website</button>
+    <button data-step="4">5. Back it up</button>
+  </div>
+
+  <div class="demo-shell">
+    <div class="demo-bar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="url">playport.local / panel</span>
+    </div>
+    <div class="demo-body">
+      <aside class="demo-side" id="nav">
+        <div class="demo-logo"><img src="assets/logo-transparent.svg" alt=""><span>PlayPort</span></div>
+        <button data-view="dashboard" class="active">Dashboard</button>
+        <button data-view="servers">Game servers</button>
+        <button data-view="console">Console</button>
+        <button data-view="websites">Websites</button>
+        <button data-view="files">Files</button>
+        <button data-view="backups">Backups</button>
+        <button data-view="databases">Databases</button>
+        <button data-view="settings">Settings</button>
+      </aside>
+
+      <div class="demo-main">
+
+        <div class="demo-view active" id="view-dashboard">
+          <h3>Dashboard</h3>
+          <p class="sub">One screen of truth: every part of the panel checked in a single pass.</p>
+          <div class="tiles">
+            <div class="tile"><div class="k">Panel</div><div class="v" style="color:var(--lime)">healthy</div></div>
+            <div class="tile"><div class="k">Data volume</div><div class="v">41.2 <small>GB free of 250</small></div></div>
+            <div class="tile"><div class="k">MariaDB</div><div class="v" style="color:var(--lime)">running</div></div>
+            <div class="tile"><div class="k">Java runtimes</div><div class="v">2 <small>installed</small></div></div>
+            <div class="tile"><div class="k">Servers running</div><div class="v">1 <small>of 3</small></div></div>
+            <div class="tile"><div class="k">Last backup</div><div class="v" style="color:#ff9d3c">4 days ago</div></div>
+          </div>
+          <div class="note" style="margin-top:20px">
+            <p style="margin:0">System health: <strong>2 warnings</strong>. The Survival world has no backup in the last week, and one website has HTTPS switched off.</p>
+          </div>
+        </div>
+
+        <div class="demo-view" id="view-servers">
+          <h3>Game servers</h3>
+          <p class="sub">Minecraft and Steam servers, installed and managed by the panel.</p>
+          <div class="demo-controls">
+            <button class="go" id="add-server">+ New server</button>
+          </div>
+          <table class="demo">
+            <thead><tr><th>Name</th><th>Type</th><th>Port</th><th>Status</th><th></th></tr></thead>
+            <tbody id="server-rows">
+              <tr><td>Survival</td><td>Paper 1.21.4</td><td>25565</td><td><span class="pill on">running</span></td><td><button class="go" data-act="console">Console</button></td></tr>
+              <tr><td>Creative</td><td>Paper 1.21.4</td><td>25566</td><td><span class="pill off">stopped</span></td><td><button data-act="console">Console</button></td></tr>
+              <tr><td>Valheim</td><td>Steam game</td><td>2456</td><td><span class="pill off">stopped</span></td><td><button data-act="console">Console</button></td></tr>
+            </tbody>
+          </table>
+          <p class="sub" style="margin-top:16px">Click <em>Console</em> on any server to open its live console, or add a new one to watch the install run.</p>
+        </div>
+
+        <div class="demo-view" id="view-console">
+          <h3 id="console-title">Console: Survival</h3>
+          <p class="sub">Live output over a WebSocket, exactly like the real panel.</p>
+          <div class="demo-controls">
+            <button class="go" id="btn-start">Start server</button>
+            <button id="btn-say">Type "say hello"</button>
+            <button id="btn-list">Type "list"</button>
+            <button id="btn-save">Type "save-all"</button>
+            <button id="btn-stop">Stop server</button>
+          </div>
+          <div class="console" id="console"></div>
+        </div>
+
+        <div class="demo-view" id="view-websites">
+          <h3>Websites</h3>
+          <p class="sub">Static, PHP and reverse-proxy sites. Each one on its own port.</p>
+          <table class="demo">
+            <thead><tr><th>Domain</th><th>Type</th><th>Port</th><th>HTTPS</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>blog.example.com</td><td>Static</td><td>8081</td><td><span class="pill on">on</span></td><td><button data-cert="0">Manage</button></td></tr>
+              <tr><td>shop.example.com</td><td>PHP / FastCGI</td><td>8082</td><td><span class="pill off" id="cert-pill">off</span></td><td><button class="go" id="get-cert">Get certificate</button></td></tr>
+            </tbody>
+          </table>
+          <div class="note" id="cert-note" style="margin-top:18px;display:none">
+            <p style="margin:0">Certificate issued for <strong>shop.example.com</strong>. HTTPS is now on and the panel will renew it automatically.</p>
+          </div>
+        </div>
+
+        <div class="demo-view" id="view-files">
+          <h3>Files: shop.example.com</h3>
+          <p class="sub">Upload, edit, rename and download. The same manager serves game servers.</p>
+          <table class="demo">
+            <thead><tr><th>Name</th><th>Size</th><th>Modified</th></tr></thead>
+            <tbody>
+              <tr><td>index.php</td><td>2.4 KB</td><td>today 09:12</td></tr>
+              <tr><td>assets/</td><td>3 items</td><td>today 09:12</td></tr>
+              <tr><td>wp-config.php</td><td>3.1 KB</td><td>yesterday 22:04</td></tr>
+              <tr><td>backup-2026-10-01.zip</td><td>18.7 MB</td><td>Oct 1</td></tr>
+            </tbody>
+          </table>
+          <div class="demo-controls"><button>Upload</button><button>New folder</button><button>Import ZIP</button></div>
+        </div>
+
+        <div class="demo-view" id="view-backups">
+          <h3>Backups: Survival</h3>
+          <p class="sub">Choose the contents, and send a copy somewhere else.</p>
+          <table class="demo">
+            <thead><tr><th>Category</th><th>Size</th><th>Files</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Player data</td><td>99.6 KB</td><td>2</td><td><span class="pill on">included</span></td></tr>
+              <tr><td>Server settings</td><td>59.8 KB</td><td>2</td><td><span class="pill on">included</span></td></tr>
+              <tr><td>World</td><td>4.1 MB</td><td>3</td><td><span class="pill on">included</span></td></tr>
+              <tr><td>Plugins and mods</td><td>1.5 MB</td><td>2</td><td><span class="pill off">skipped</span></td></tr>
+              <tr><td>Logs and crash reports</td><td>212 KB</td><td>6</td><td><span class="pill off">skipped</span></td></tr>
+            </tbody>
+          </table>
+          <div class="demo-controls"><button class="go">Back up now</button><button>Choose a destination</button><button>Restore</button></div>
+          <p class="sub" style="margin-top:12px">Destination: <strong>\\nas\backups</strong> (last success: 4 days ago).</p>
+        </div>
+
+        <div class="demo-view" id="view-databases">
+          <h3>Databases</h3>
+          <p class="sub">A managed MariaDB server with an isolated database per site or game server.</p>
+          <table class="demo">
+            <thead><tr><th>Database</th><th>Owner</th><th>User</th></tr></thead>
+            <tbody>
+              <tr><td>shop</td><td>shop.example.com</td><td>shop_user</td></tr>
+              <tr><td>survival_plugins</td><td>Survival</td><td>survival_user</td></tr>
+            </tbody>
+          </table>
+          <div class="note" style="margin-top:18px"><p style="margin:0">MariaDB runs sandboxed with a memory cap and stops with the panel. Databases are local only and never exposed to the internet.</p></div>
+        </div>
+
+        <div class="demo-view" id="view-settings">
+          <h3>Settings</h3>
+          <p class="sub">Storage, alerts, tunnels, users and server readiness.</p>
+          <div class="tiles">
+            <div class="tile"><div class="k">Data root</div><div class="v" style="font-size:16px">playport-data/</div></div>
+            <div class="tile"><div class="k">Managed folders</div><div class="v">18.4 GB</div></div>
+            <div class="tile"><div class="k">Cloudflare tunnels</div><div class="v" style="color:var(--lime)">ready</div></div>
+            <div class="tile"><div class="k">Users</div><div class="v">3 <small>1 admin, 2 users</small></div></div>
+          </div>
+          <div class="note" style="margin-top:20px"><p style="margin:0">Two ways to go public: forward ports on your router, or start a tunnel for a temporary public URL with no open ports.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Like what you see?</h2>
+    <p class="section-lead">The real thing is one download away.</p>
+    <div class="cta">
+      <a class="btn primary" href="download/PlayPort.exe" download>Download PlayPort.exe</a>
+      <a class="btn ghost" href="docs/">Read the manual</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p style="margin:0">PlayPort. Hosting together. On your terms. <a href="index.html">Back to home</a>.</p>
+    <p style="margin:12px 0 0">Copyright &copy; 2026 Joshua van Doorn, trading as PlayPort. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var nav = document.getElementById("nav");
+  var views = document.querySelectorAll(".demo-view");
+  var current = "dashboard";
+
+  function show(view) {
+    current = view;
+    for (var i = 0; i < views.length; i++) {
+      views[i].classList.toggle("active", views[i].id === "view-" + view);
+    }
+    var btns = nav.querySelectorAll("button");
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].classList.toggle("active", btns[j].getAttribute("data-view") === view);
+    }
+  }
+
+  nav.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-view]");
+    if (b) show(b.getAttribute("data-view"));
+  });
+
+  /* Guided steps */
+  var steps = document.querySelectorAll("#steps button");
+  steps.forEach(function (b) {
+    b.addEventListener("click", function () {
+      steps.forEach(function (x) { x.classList.remove("active"); });
+      b.classList.add("active");
+      var s = b.getAttribute("data-step");
+      if (s === "0") show("dashboard");
+      if (s === "1") show("servers");
+      if (s === "2") { document.getElementById("console-title").textContent = "Console: Survival"; clearConsole(); show("console"); }
+      if (s === "3") show("websites");
+      if (s === "4") show("backups");
+    });
+  });
+
+  /* Console simulation */
+  var cons = document.getElementById("console");
+  function line(text, cls) {
+    var d = document.createElement("div");
+    if (cls) d.className = cls;
+    d.textContent = text;
+    cons.appendChild(d);
+    cons.scrollTop = cons.scrollHeight;
+  }
+  function stamp() {
+    var d = new Date();
+    return "[" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + ":" + String(d.getSeconds()).padStart(2, "0") + "]";
+  }
+  function clearConsole() { cons.innerHTML = ""; line(stamp() + " Server running. Type a command below.", "t"); }
+
+  var starting = false;
+  document.getElementById("btn-start").addEventListener("click", function () {
+    if (starting) return;
+    starting = true;
+    clearConsole();
+    var boot = [
+      "[INFO] Starting minecraft server version 1.21.4",
+      "[INFO] Loading properties",
+      "[INFO] Preparing level \"world\"",
+      "[INFO] Preparing spawn area: 74%",
+      "[INFO] Done (2.431s)! For help, type \"help\""
+    ];
+    boot.forEach(function (t, i) { setTimeout(function () { line(stamp() + " " + t); }, 350 * i); });
+    setTimeout(function () { starting = false; }, 350 * boot.length);
+  });
+
+  function cmd(text, replies) {
+    line(stamp() + " > " + text, "cmd");
+    replies.forEach(function (r, i) { setTimeout(function () { line(stamp() + " " + r); }, 300 * (i + 1)); });
+  }
+  document.getElementById("btn-say").addEventListener("click", function () {
+    cmd("say hello", ["[INFO] [Server] hello", "[INFO] [Notch] hello"]);
+  });
+  document.getElementById("btn-list").addEventListener("click", function () {
+    cmd("list", ["[INFO] There are 2 of a max of 20 players online: Notch, Steve"]);
+  });
+  document.getElementById("btn-save").addEventListener("click", function () {
+    cmd("save-all", ["[INFO] Saving the game", "[INFO] Saved the game"]);
+  });
+  document.getElementById("btn-stop").addEventListener("click", function () {
+    cmd("stop", ["[INFO] Stopping the server", "[INFO] Saving players", "[INFO] Saving worlds", "[INFO] Server stopped"]);
+  });
+
+  /* Add a server */
+  document.getElementById("add-server").addEventListener("click", function () {
+    var tb = document.getElementById("server-rows");
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td>Skyblock</td><td>Paper 1.21.4</td><td>25567</td><td><span class=\"pill warn\">installing\u2026</span></td><td><button data-act=\"console\">Console</button></td>";
+    tb.appendChild(tr);
+    setTimeout(function () {
+      tr.children[3].innerHTML = "<span class=\"pill off\">stopped</span>";
+    }, 2200);
+  });
+
+  /* Open console from a server row */
+  document.getElementById("view-servers").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-act='console']");
+    if (!b) return;
+    var name = b.closest("tr").children[0].textContent;
+    document.getElementById("console-title").textContent = "Console: " + name;
+    clearConsole();
+    show("console");
+  });
+
+  /* Certificate */
+  document.getElementById("get-cert").addEventListener("click", function () {
+    var pill = document.getElementById("cert-pill");
+    pill.className = "pill warn";
+    pill.textContent = "issuing\u2026";
+    setTimeout(function () {
+      pill.className = "pill on";
+      pill.textContent = "on";
+      document.getElementById("cert-note").style.display = "block";
+    }, 1600);
+  });
+})();
+</script>
+</body>
+</html>

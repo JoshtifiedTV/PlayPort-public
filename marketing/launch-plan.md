@@ -11,7 +11,7 @@ the schedule as a template rather than a fixed calendar.
 - [ ] Choose the support address and set `[CONTACT_EMAIL]`.
 - [ ] Confirm the release build is the one you are shipping
       (`download/PlayPort.exe` and its `.sha256`).
-- [ ] Post the download and its [disclaimer](../DISCLAIMER.md) together — the
+- [ ] Post the download and its [disclaimer](../DISCLAIMER.md) together - the
       unsigned-build warning should be visible before anyone runs the exe.
 - [ ] Pick the campaign mode: **Explore** (live product) or **Follow**
       (pre-launch). Do not imply availability that does not exist yet.
@@ -28,7 +28,7 @@ the schedule as a template rather than a fixed calendar.
 
 ## After launch (first two weeks)
 
-- [ ] Reply to feedback and collect the most common questions — they are the
+- [ ] Reply to feedback and collect the most common questions - they are the
       first candidates for the manual and the FAQ.
 - [ ] Re-check the artwork crops on each platform.
 - [ ] Note what to change for the next release and feed it back into

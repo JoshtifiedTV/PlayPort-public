@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlayPort manual</title>
+<meta name="description" content="The PlayPort manual: install it, run game servers, host websites, add HTTPS and back everything up, in plain language.">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html"><img src="../assets/wordmark-transparent.svg" alt="PlayPort"></a>
+    <nav class="links">
+      <a class="link" href="../index.html#features">Features</a>
+      <a class="link" href="../demo.html">Live demo</a>
+      <a class="link" href="../index.html#faq">FAQ</a>
+      <a class="dl-btn" href="../download/PlayPort.exe" download>Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding-top:32px">
+  <div class="docs-layout">
+    <nav class="docs-toc">
+      <h4>On this page</h4>
+      <a class="" href="#before-you-start">Before you start</a>
+        <a class="" href="#getting-started">Getting started</a>
+        <a class="sub" href="#1-download-and-run">1. Download and run</a>
+        <a class="sub" href="#2-first-run">2. First run</a>
+        <a class="sub" href="#3-add-your-first-thing">3. Add your first thing</a>
+        <a class="sub" href="#where-your-data-lives">Where your data lives</a>
+        <a class="sub" href="#stopping-playport">Stopping PlayPort</a>
+        <a class="sub" href="#updating-playport">Updating PlayPort</a>
+        <a class="" href="#the-panel-at-a-glance">The panel at a glance</a>
+        <a class="" href="#game-servers">Game servers</a>
+        <a class="sub" href="#create-a-minecraft-server">Create a Minecraft server</a>
+        <a class="sub" href="#create-a-steam-game-server">Create a Steam game server</a>
+        <a class="sub" href="#a-server-from-any-executable">A server from any executable</a>
+        <a class="sub" href="#the-console">The console</a>
+        <a class="sub" href="#starting-stopping-and-restarts">Starting, stopping and restarts</a>
+        <a class="sub" href="#settings-and-ram">Settings and RAM</a>
+        <a class="" href="#minecraft-networks">Minecraft networks</a>
+        <a class="sub" href="#modpacks-and-plugins">Modpacks and plugins</a>
+        <a class="" href="#websites">Websites</a>
+        <a class="sub" href="#host-a-static-site">Host a static site</a>
+        <a class="sub" href="#host-a-php-site">Host a PHP site</a>
+        <a class="sub" href="#import-a-folder-or-a-zip">Import a folder or a ZIP</a>
+        <a class="sub" href="#preview-before-going-live">Preview before going live</a>
+        <a class="sub" href="#reverse-proxy">Reverse proxy</a>
+        <a class="" href="#domains-and-https">Domains and HTTPS</a>
+        <a class="" href="#going-public">Going public</a>
+        <a class="sub" href="#open-a-port-on-your-router">Open a port on your router</a>
+        <a class="sub" href="#use-a-tunnel-no-router-changes">Use a tunnel (no router changes)</a>
+        <a class="" href="#databases">Databases</a>
+        <a class="" href="#email">Email</a>
+        <a class="" href="#backups">Backups</a>
+        <a class="sub" href="#what-a-backup-contains">What a backup contains</a>
+        <a class="sub" href="#where-copies-go">Where copies go</a>
+        <a class="sub" href="#restoring">Restoring</a>
+        <a class="" href="#files-schedules-and-monitoring">Files, schedules and monitoring</a>
+        <a class="" href="#users-and-permissions">Users and permissions</a>
+        <a class="" href="#the-built-in-assistant">The built-in assistant</a>
+        <a class="" href="#troubleshooting">Troubleshooting</a>
+        <a class="sub" href="#windows-warns-that-the-publisher-is-unknown">Windows warns that the publisher is unknown</a>
+        <a class="sub" href="#the-panel-will-not-start-or-the-port-is-in-use">The panel will not start, or the port is in use</a>
+        <a class="sub" href="#i-cannot-reach-my-site-or-server-from-the-internet">I cannot reach my site or server from the internet</a>
+        <a class="sub" href="#a-minecraft-server-will-not-start">A Minecraft server will not start</a>
+        <a class="sub" href="#my-website-shows-a-blank-page-or-an-error">My website shows a blank page or an error</a>
+        <a class="sub" href="#something-is-stuck">Something is stuck</a>
+        <a class="" href="#uninstalling">Uninstalling</a>
+        <a class="" href="#licence-and-warranty">Licence and warranty</a>
+    </nav>
+    <article class="docs-body">
+<h1 id="playport-manual">PlayPort manual</h1>
+<p>Welcome. PlayPort is a self-hosting panel for Windows that runs two things from one window: <strong>game servers</strong> and <strong>websites</strong>. It is a single <code>.exe</code>. There is nothing to install and no separate runtime to set up.</p>
+<p>This manual is written to be read, not decoded. It starts with getting the app running, then walks through each job you can do with it. If you would rather poke at a simulated panel first, open the <a href="../demo.html">interactive demo</a>.</p>
+<hr>
+<h2 id="before-you-start">Before you start <a class="anchor" href="#before-you-start" aria-label="link to this section">#</a></h2>
+<p>You need:</p>
+<ul><li>A Windows 10 or 11 PC. PlayPort uses the .NET Framework that is already part of Windows.</li><li>A writable folder to keep it in. The Desktop, your Documents folder, or a dedicated folder such as <code>C:\PlayPort</code> all work.</li><li>Administrator rights only if you want to accept connections from the internet. Running servers and websites on your own machine does not need them.</li></ul>
+<p>You do <strong>not</strong> need a database, IIS, nginx, Node.js or Java on the machine. PlayPort downloads and manages what a server or website needs, when it needs it, into its own data folder.</p>
+<hr>
+<h2 id="getting-started">Getting started <a class="anchor" href="#getting-started" aria-label="link to this section">#</a></h2>
+<h3 id="1-download-and-run">1. Download and run <a class="anchor" href="#1-download-and-run" aria-label="link to this section">#</a></h3>
+<ol><li>Grab <strong>PlayPort.exe</strong> from the <a href="../index.html#download">download page</a>.</li><li>Put it in the folder you chose.</li><li>Double-click it, or run it from a terminal:</li></ol>
+<p>   ``<code>    PlayPort.exe --open    </code>``</p>
+<p>The panel starts and opens in your browser at <code>http://127.0.0.1:8080/</code>. A small console window also opens and stays open. That window is the panel; closing it stops PlayPort and its servers.</p>
+<blockquote><p>The build is not code-signed, so Windows may warn you the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>. This is explained in the <a href="../DISCLAIMER.md">disclaimer</a>, including how to verify the download against its checksum.</p></blockquote>
+<h3 id="2-first-run">2. First run <a class="anchor" href="#2-first-run" aria-label="link to this section">#</a></h3>
+<p>The first time it opens, PlayPort asks you to create an <strong>admin account</strong>. Pick a username and password and you are in. You can add more people later under <strong>Settings → Users</strong>.</p>
+<h3 id="3-add-your-first-thing">3. Add your first thing <a class="anchor" href="#3-add-your-first-thing" aria-label="link to this section">#</a></h3>
+<p>From the panel you can either:</p>
+<ul><li>Click <strong>Game servers → + New server</strong> to install a Minecraft or Steam game server, or</li><li>Click <strong>Websites → + Host a website</strong> to put a website online.</li></ul>
+<p>Both are covered in their own sections below.</p>
+<h3 id="where-your-data-lives">Where your data lives <a class="anchor" href="#where-your-data-lives" aria-label="link to this section">#</a></h3>
+<p>Everything PlayPort creates lives in a folder called <code>playport-data/</code>, next to the <code>.exe</code>:</p>
+<pre><code>PlayPort.exe
+playport-data/       &lt;- settings, websites, servers, databases, backups</code></pre>
+<p>That folder is the whole app. Recent versions remember which location you chose, so a later launch reuses it.</p>
+<h3 id="stopping-playport">Stopping PlayPort <a class="anchor" href="#stopping-playport" aria-label="link to this section">#</a></h3>
+<p>Plain ways to stop it, none of which need administrator rights:</p>
+<ul><li>Type <code>exit</code> in the console window, or press Ctrl+C in it.</li><li>Close the console window (the little <strong>X</strong>).</li><li>Run <code>PlayPort.exe --stop</code> from another window.</li><li>Just launch a newer <code>PlayPort.exe</code> on the same port. The new copy asks the old one to stop, waits for the port, and takes over.</li></ul>
+<p>When PlayPort stops it <strong>saves and stops your game servers first</strong>, so worlds are not left running or half-written.</p>
+<h3 id="updating-playport">Updating PlayPort <a class="anchor" href="#updating-playport" aria-label="link to this section">#</a></h3>
+<p>There is no self-updater, on purpose. Updating means <strong>running a newer <code>PlayPort.exe</code></strong>. Your data is safe: it lives in <code>playport-data/</code>, not inside the <code>.exe</code>. Download the new build, put it where you like, and launch it. If an older panel is still running, the new one takes over as described above.</p>
+<hr>
+<h2 id="the-panel-at-a-glance">The panel at a glance <a class="anchor" href="#the-panel-at-a-glance" aria-label="link to this section">#</a></h2>
+<p>The left sidebar is how you move around. The main screens are:</p>
+<table><thead><tr><th>Screen</th><th>What it is for</th></tr></thead><tbody><tr><td><strong>Dashboard</strong></td><td>A system health check: panel, disk space, database, backups, certificates, and anything that needs attention.</td></tr><tr><td><strong>Game servers</strong></td><td>Every Minecraft and Steam server, with start, stop, console and settings.</td></tr><tr><td><strong>Websites</strong></td><td>Every website, with its files, HTTPS and public access.</td></tr><tr><td><strong>Files</strong></td><td>The file manager, shared by servers and sites.</td></tr><tr><td><strong>Backups</strong></td><td>What each server backs up, and where copies go.</td></tr><tr><td><strong>Databases</strong></td><td>The managed MariaDB server and the databases handed out to sites and servers.</td></tr><tr><td><strong>Activity</strong></td><td>Every long-running job (installs, updates, backups) with progress and a retry button.</td></tr><tr><td><strong>Settings</strong></td><td>Storage, alerts, tunnels, users, Java runtimes and server readiness.</td></tr></tbody></table>
+<p>Two conveniences worth knowing straight away:</p>
+<ul><li><strong>Search:</strong> press <strong>Ctrl+K</strong> anywhere. One box searches servers, websites, databases, mailboxes, backups and console history. It only shows things you are allowed to open.</li><li><strong>Activity:</strong> if something is taking a while, it is listed there with progress rather than freezing the page.</li></ul>
+<hr>
+<h2 id="game-servers">Game servers <a class="anchor" href="#game-servers" aria-label="link to this section">#</a></h2>
+<p>PlayPort installs and updates game server files, starts and stops them, shows a live console, and gives you the settings in plain language. Everything runs on your machine.</p>
+<h3 id="create-a-minecraft-server">Create a Minecraft server <a class="anchor" href="#create-a-minecraft-server" aria-label="link to this section">#</a></h3>
+<ol><li>Open <strong>Game servers → + New server</strong>.</li><li>Pick <strong>Minecraft: Vanilla</strong> or <strong>Paper</strong>. Paper is the common choice for plugins.</li><li>Choose a version. Leave it on <strong>latest</strong> to always use the newest stable version.</li><li>Give it a name, RAM and a port (the default is 25565).</li><li>Accept the Minecraft EULA when asked. You must accept it to run a Minecraft server; this is Mojang's rule, not PlayPort's.</li></ol>
+<p>PlayPort downloads the jar, sets up the runtime, and adds the server to your list. Press <strong>Start</strong>, then open the <strong>Console</strong> to watch it boot.</p>
+<h3 id="create-a-steam-game-server">Create a Steam game server <a class="anchor" href="#create-a-steam-game-server" aria-label="link to this section">#</a></h3>
+<ol><li>Open <strong>Game servers → + New server</strong> and choose <strong>SteamCMD</strong>.</li><li>Pick a game, either from the built-in catalog or by typing its Steam App ID.</li><li>Free dedicated servers (for example Team Fortress 2 or Counter-Strike 2) install with an anonymous login. Games you own need your Steam username and password, set in the server's <strong>Settings</strong> page.</li><li>After the files install, set the <strong>start executable</strong> (for example <code>steamapps/common/valheim/valheim_server.exe</code>).</li></ol>
+<p>PlayPort handles installing and updating the files. How a given game boots is up to that game, so the start command is something you fill in, the same way other game panels do it.</p>
+<h3 id="a-server-from-any-executable">A server from any executable <a class="anchor" href="#a-server-from-any-executable" aria-label="link to this section">#</a></h3>
+<p>The <strong>Manual</strong> option runs any program as a server. Point it at an executable and working folder, and PlayPort gives it the same console, start/stop and backup treatment as the built-in types.</p>
+<h3 id="the-console">The console <a class="anchor" href="#the-console" aria-label="link to this section">#</a></h3>
+<p>Each server has a <strong>Console</strong> tab: live output over a WebSocket, an input box to type commands, and one-click chips for commands you use often. You can save a typed command as a chip (up to 30 per server). Sending to a stopped server is refused, because there is nothing to write to.</p>
+<h3 id="starting-stopping-and-restarts">Starting, stopping and restarts <a class="anchor" href="#starting-stopping-and-restarts" aria-label="link to this section">#</a></h3>
+<p>Start and stop are single buttons. PlayPort also gives you:</p>
+<ul><li><strong>Restart warnings:</strong> before a scheduled restart, players get a countdown in chat.</li><li><strong>Auto-restart:</strong> if a server crashes, PlayPort can bring it back. It gives up after too many crashes in a row rather than looping forever.</li><li><strong>Plain-English crashes:</strong> when a server dies, the panel explains likely causes rather than dumping a stack trace.</li></ul>
+<h3 id="settings-and-ram">Settings and RAM <a class="anchor" href="#settings-and-ram" aria-label="link to this section">#</a></h3>
+<p>A server's <strong>Settings</strong> page holds its name, version, RAM, port, Java runtime and start command. Changes that need a restart say so. Minecraft's own <code>server.properties</code> is edited through a friendly form, grouped and labelled, instead of by hand.</p>
+<hr>
+<h2 id="minecraft-networks">Minecraft networks <a class="anchor" href="#minecraft-networks" aria-label="link to this section">#</a></h2>
+<p>A <strong>network</strong> is a proxy in front of several Minecraft servers, so players join one address and move between them. PlayPort can build the whole thing in one go:</p>
+<ol><li>Open <strong>Game servers → + New server</strong>, then choose the <strong>Network</strong> category.</li><li>Pick a name and port for the proxy.</li><li>Choose a hub (where players land) and any number of game servers, each with its own port.</li><li>Optionally add a limbo lobby, a lightweight holding area for players.</li></ol>
+<p>PlayPort writes all the configs (the proxy and every backend), sets up player forwarding, and gives the network a single <strong>Start network</strong> / <strong>Stop network</strong> button. Backends come up first, then the proxy; stopping runs in reverse.</p>
+<h3 id="modpacks-and-plugins">Modpacks and plugins <a class="anchor" href="#modpacks-and-plugins" aria-label="link to this section">#</a></h3>
+<ul><li><strong>Modpacks:</strong> the new-server dialog has a <strong>Modpacks</strong> category, fed by Modrinth's public catalog. Pick a pack and a version; PlayPort installs the mods and the right server loader (Fabric, Forge or NeoForge) for you.</li><li><strong>Plugins:</strong> Paper and Velocity servers get a <strong>Plugins</strong> tab that browses Modrinth. Search, install and the panel restarts the server for you.</li></ul>
+<hr>
+<h2 id="websites">Websites <a class="anchor" href="#websites" aria-label="link to this section">#</a></h2>
+<p>PlayPort hosts websites directly. There is no IIS or nginx involved, and each site runs on its own port.</p>
+<h3 id="host-a-static-site">Host a static site <a class="anchor" href="#host-a-static-site" aria-label="link to this section">#</a></h3>
+<ol><li>Open <strong>Websites → + Host a website</strong>.</li><li>Choose <strong>Static</strong>.</li><li>Give it a domain or a name and a port (for example 8081).</li><li>Upload files through the site's <strong>Files</strong> tab, or point it at an existing folder on disk.</li></ol>
+<h3 id="host-a-php-site">Host a PHP site <a class="anchor" href="#host-a-php-site" aria-label="link to this section">#</a></h3>
+<p>Choose <strong>PHP / FastCGI</strong>. PlayPort downloads <code>php-cgi</code> on first use and speaks FastCGI itself. A PHP site runs <code>index.php</code> out of the box, so you can drop in WordPress or another PHP app and install it from the browser. Each site gets its own generated <code>php.ini</code>.</p>
+<h3 id="import-a-folder-or-a-zip">Import a folder or a ZIP <a class="anchor" href="#import-a-folder-or-a-zip" aria-label="link to this section">#</a></h3>
+<ul><li><strong>A folder on disk:</strong> set the site to serve an existing folder, and PlayPort serves it in place. Nothing is copied or moved.</li><li><strong>A ZIP:</strong> use <strong>Files → Import ZIP</strong> to unpack a built site straight into the site root.</li><li><strong>Build output:</strong> if you point PlayPort at a JavaScript project (React, Vue, Svelte, Next static export, and others), it can detect the framework, run the build, and serve the output folder for you.</li></ul>
+<h3 id="preview-before-going-live">Preview before going live <a class="anchor" href="#preview-before-going-live" aria-label="link to this section">#</a></h3>
+<p>Every site has a <strong>Preview</strong> button. It serves the site on a throwaway local port so you can check it in your browser without it being public. Stop the preview when you are done.</p>
+<h3 id="reverse-proxy">Reverse proxy <a class="anchor" href="#reverse-proxy" aria-label="link to this section">#</a></h3>
+<p>A <strong>reverse-proxy</strong> site forwards traffic to another program you are running (for example an app on <code>127.0.0.1:3000</code>). Use it when your site is served by something PlayPort did not launch itself.</p>
+<hr>
+<h2 id="domains-and-https">Domains and HTTPS <a class="anchor" href="#domains-and-https" aria-label="link to this section">#</a></h2>
+<p>Each website has a <strong>TLS</strong> panel in its Settings. There are three ways to get HTTPS:</p>
+<table><thead><tr><th>Method</th><th>When to use it</th></tr></thead><tbody><tr><td><strong>Let's Encrypt</strong></td><td>You own a domain and it points at this machine. One click gets a real, browser-trusted certificate. The panel speaks to the certificate authority itself; no extra tools.</td></tr><tr><td><strong>Self-signed</strong></td><td>For testing on your local network. Browsers will warn about it, which is expected.</td></tr><tr><td><strong>Upload PFX</strong></td><td>You already have a certificate, for example from your company or registrar.</td></tr></tbody></table>
+<p>For <strong>Let's Encrypt</strong>, the domain must reach this machine on port 80 for the first check. There is a <strong>staging</strong> option to test the process without using up your rate limit. Once HTTPS is on, you set a TLS port (443 by default) and the site serves both HTTP and HTTPS.</p>
+<p>Certificates from Let's Encrypt are <strong>renewed automatically</strong> before they expire. Self-signed and uploaded certificates are never replaced.</p>
+<hr>
+<h2 id="going-public">Going public <a class="anchor" href="#going-public" aria-label="link to this section">#</a></h2>
+<p>By default everything listens on <code>127.0.0.1</code>, meaning only this machine. To let other people in, you have two routes.</p>
+<h3 id="open-a-port-on-your-router">Open a port on your router <a class="anchor" href="#open-a-port-on-your-router" aria-label="link to this section">#</a></h3>
+<p>This is the classic approach. Three things have to line up:</p>
+<ol><li><strong>Router:</strong> forward the port (for example 25565 for Minecraft, or 80/443 for a website) to this PC's local address.</li><li><strong>Firewall:</strong> allow the matching inbound port in Windows Firewall. PlayPort's <strong>Settings → Server readiness</strong> page tells you exactly which rule is missing.</li><li><strong>Bind address:</strong> in the site or panel settings, choose to listen on all interfaces rather than only loopback.</li></ol>
+<p>The <strong>Server readiness</strong> screen measures these for you rather than guessing, and names the one thing left to fix.</p>
+<h3 id="use-a-tunnel-no-router-changes">Use a tunnel (no router changes) <a class="anchor" href="#use-a-tunnel-no-router-changes" aria-label="link to this section">#</a></h3>
+<p>Tunnels are the easy way to share something without touching your router.</p>
+<ul><li><strong>Cloudflare quick tunnel:</strong> open a site's <strong>Public access</strong> panel and start a quick tunnel. Within seconds you get a temporary <code>https://something.trycloudflare.com</code> link, with no account and no open ports. It disappears when you stop it or close PlayPort.</li><li><strong>Cloudflare named tunnel:</strong> for a stable hostname, PlayPort can generate a config that routes your domains. The one-time terminal setup is described on the screen.</li><li><strong>playit.gg:</strong> an alternative tunnelling agent the panel can install and run for you.</li></ul>
+<p>Tunnels stop automatically when PlayPort closes, so nothing stays reachable by accident.</p>
+<hr>
+<h2 id="databases">Databases <a class="anchor" href="#databases" aria-label="link to this section">#</a></h2>
+<p><strong>Settings → MySQL</strong> installs a portable MariaDB server (no Windows service, no admin rights needed). From there, any website or game server can get its own database and user in one click. Each database gets a user that can only touch that one database.</p>
+<p>MariaDB runs on <code>127.0.0.1</code> only, so databases are for local sites and servers and are never exposed to the internet. It runs sandboxed with a memory cap and stops when PlayPort stops.</p>
+<hr>
+<h2 id="email">Email <a class="anchor" href="#email" aria-label="link to this section">#</a></h2>
+<p>PlayPort includes a small mail service so a PHP site can send mail immediately. By default it runs in <strong>capture</strong> mode: mail is kept on the machine so you can confirm a site's email works, and nothing is delivered. When you are ready, you can switch to <strong>relay</strong> (through your email provider, which is the reliable option from a home connection) or <strong>direct</strong> delivery.</p>
+<p>The <strong>Email</strong> page walks through hooking up a domain, publishing the DNS records it shows you, and sending a test message.</p>
+<hr>
+<h2 id="backups">Backups <a class="anchor" href="#backups" aria-label="link to this section">#</a></h2>
+<p>Backups are the part that saves you, so PlayPort makes them specific rather than giant.</p>
+<h3 id="what-a-backup-contains">What a backup contains <a class="anchor" href="#what-a-backup-contains" aria-label="link to this section">#</a></h3>
+<p>A server's <strong>Backups</strong> tab opens with a plan, split into categories (player data, server settings, world, plugins and mods, logs and crash reports, everything). Each category shows <strong>what it would actually take</strong>, measured from disk. Start from <strong>Smallest</strong>, <strong>Standard</strong> or <strong>Everything</strong>, then tick what you want. Your choice is remembered for that server.</p>
+<p>Each archive carries a small manifest, so the list tells you in plain words what is inside.</p>
+<h3 id="where-copies-go">Where copies go <a class="anchor" href="#where-copies-go" aria-label="link to this section">#</a></h3>
+<p>A backup on the same disk as the server does not protect you from that disk failing, so each server can also copy its archives somewhere else:</p>
+<table><thead><tr><th>Destination</th><th>What it is for</th></tr></thead><tbody><tr><td><strong>Folder or share</strong></td><td>A second disk, a USB drive, or a network path such as <code>\\nas\backups</code>.</td></tr><tr><td><strong>S3-compatible bucket</strong></td><td>Cloudflare R2, Backblaze B2, Wasabi, MinIO and similar.</td></tr><tr><td><strong>Public file host</strong></td><td>Hand a single archive to somebody with a link.</td></tr></tbody></table>
+<p>You can <strong>test</strong> a destination before trusting it, and each one remembers its last success and last failure.</p>
+<h3 id="restoring">Restoring <a class="anchor" href="#restoring" aria-label="link to this section">#</a></h3>
+<p>Every backup can be <strong>downloaded</strong> (the safe option: you get the file and nothing is changed) or <strong>restored</strong> (PlayPort writes the files it contains back into the server folder, leaving anything else alone).</p>
+<hr>
+<h2 id="files-schedules-and-monitoring">Files, schedules and monitoring <a class="anchor" href="#files-schedules-and-monitoring" aria-label="link to this section">#</a></h2>
+<ul><li><strong>File manager:</strong> upload, download, edit, rename, move and delete, for both servers and sites. There is also a ZIP import.</li><li><strong>Schedules:</strong> start, stop, restart, back up or send a command on a timer, per server.</li><li><strong>Storage and alerts:</strong> <strong>Settings → Storage</strong> totals what PlayPort manages, and <strong>Alerts</strong> can send a webhook or email when a server crashes, a backup fails, or disk space runs low.</li><li><strong>Live player counts:</strong> server and network cards show who is online, read from the game's own status protocol.</li><li><strong>Phone layout:</strong> the whole panel is usable from a phone on the same network.</li></ul>
+<hr>
+<h2 id="users-and-permissions">Users and permissions <a class="anchor" href="#users-and-permissions" aria-label="link to this section">#</a></h2>
+<p>There are three roles:</p>
+<ul><li><strong>Admin:</strong> everything, including users and panel settings.</li><li><strong>Moderator:</strong> manages every server and site, but not users or panel settings.</li><li><strong>User:</strong> sees and controls only what they create.</li></ul>
+<p>On top of roles, an admin can <strong>grant</strong> one person access to one specific server or site without handing over ownership. Grants are deliberately coarse (view, start/stop, edit, files) and the panel hides buttons a person cannot use. The server re-checks every request regardless.</p>
+<hr>
+<h2 id="the-built-in-assistant">The built-in assistant <a class="anchor" href="#the-built-in-assistant" aria-label="link to this section">#</a></h2>
+<p>PlayPort ships a built-in assistant that helps inside the panel. It answers questions about the panel itself, can read a server's recent log to explain a crash, and can point you at the right screen. It runs locally with no account required, and every action it can take is limited to what the person asking is allowed to do.</p>
+<hr>
+<h2 id="troubleshooting">Troubleshooting <a class="anchor" href="#troubleshooting" aria-label="link to this section">#</a></h2>
+<h3 id="windows-warns-that-the-publisher-is-unknown">Windows warns that the publisher is unknown <a class="anchor" href="#windows-warns-that-the-publisher-is-unknown" aria-label="link to this section">#</a></h3>
+<p>Expected. The build is not code-signed. Click <strong>More info → Run anyway</strong>. On Windows 11, if <strong>Smart App Control</strong> blocks it outright, that setting can be turned off in <strong>Windows Security → App &amp; browser control</strong>; note that turning it off is not reversible without resetting Windows, so only do it if you understand that. To be sure your download is genuine, compare its SHA-256 hash with the published <code>.sha256</code> file:</p>
+<pre><code>certutil -hashfile PlayPort.exe SHA256</code></pre>
+<h3 id="the-panel-will-not-start-or-the-port-is-in-use">The panel will not start, or the port is in use <a class="anchor" href="#the-panel-will-not-start-or-the-port-is-in-use" aria-label="link to this section">#</a></h3>
+<p>A PlayPort may already be running. The new copy detects it and offers to take over, or you can run <code>PlayPort.exe --stop</code>. If a different program holds the port, change PlayPort's port (<code>PlayPort.exe --port 8081</code>) or the other program's.</p>
+<h3 id="i-cannot-reach-my-site-or-server-from-the-internet">I cannot reach my site or server from the internet <a class="anchor" href="#i-cannot-reach-my-site-or-server-from-the-internet" aria-label="link to this section">#</a></h3>
+<p>Run <strong>Settings → Server readiness</strong>. It checks the router path, the firewall, the bind address and the certificate, and tells you the specific thing to fix. On a home connection, a <strong>tunnel</strong> (see above) is often the faster answer.</p>
+<h3 id="a-minecraft-server-will-not-start">A Minecraft server will not start <a class="anchor" href="#a-minecraft-server-will-not-start" aria-label="link to this section">#</a></h3>
+<p>Almost always Java. A server needs the matching runtime, and PlayPort downloads them for you. Open the server's <strong>Settings</strong>, where the panel names the Java the server asks for and offers a one-click <strong>Install Java</strong>. A server pinned to a Java version its jar cannot load is reported clearly rather than left to fail silently.</p>
+<h3 id="my-website-shows-a-blank-page-or-an-error">My website shows a blank page or an error <a class="anchor" href="#my-website-shows-a-blank-page-or-an-error" aria-label="link to this section">#</a></h3>
+<p>Check the site's <strong>Console</strong> and its log. For PHP sites, confirm the file you expect is <code>index.php</code>. For built JavaScript sites, confirm the build completed on the <strong>Activity</strong> page and that the output folder is the one being served.</p>
+<h3 id="something-is-stuck">Something is stuck <a class="anchor" href="#something-is-stuck" aria-label="link to this section">#</a></h3>
+<p>Open <strong>Activity</strong>. Long jobs are listed there with progress, and jobs the panel can redo offer a <strong>Retry</strong> button.</p>
+<hr>
+<h2 id="uninstalling">Uninstalling <a class="anchor" href="#uninstalling" aria-label="link to this section">#</a></h2>
+<p>Delete the <code>playport-data/</code> folder, then delete <code>PlayPort.exe</code>. That is the whole uninstall. Nothing was written to the Windows registry or system folders, and no service was installed.</p>
+<p>If you want to keep your worlds or website files, copy them out of <code>playport-data/</code> first.</p>
+<hr>
+<h2 id="licence-and-warranty">Licence and warranty <a class="anchor" href="#licence-and-warranty" aria-label="link to this section">#</a></h2>
+<p>PlayPort is proprietary software. Copyright © 2026 Joshua van Doorn, trading as PlayPort. All rights reserved. See the <a href="../LICENSE">LICENSE</a>.</p>
+<p>It is provided as is, without warranty of any kind. It manages servers and can move or overwrite world files, so keep backups. You are responsible for your own data.</p>
+<p>Nothing here implies approval or endorsement by Mojang, Valve, or any other game or service mentioned.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p style="margin:0">PlayPort. Hosting together. On your terms.</p>
+    <p style="margin:12px 0 0"><a href="../index.html">Home</a> &middot; <a href="../demo.html">Demo</a> &middot; <a href="../DISCLAIMER.md">Disclaimer</a> &middot; <a href="../LICENSE">Licence</a>. Copyright &copy; 2026 Joshua van Doorn, trading as PlayPort.</p>
+  </div>
+</footer>
+
+</body>
+</html>

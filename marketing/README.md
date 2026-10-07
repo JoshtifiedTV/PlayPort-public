@@ -1,6 +1,6 @@
 # PlayPort marketing kit
 
-**PlayPort — All-in-one self-hosting platform**  
+**PlayPort - All-in-one self-hosting platform**  
 **Play your way**  
 Hosting together. On your terms.
 
@@ -23,9 +23,9 @@ Open `index.html` for a visual gallery and downloadable originals. All artwork i
 | profile-cover-1500x500.svg | 1500 × 500 | Profile header |
 | video-thumbnail-1280x720.svg | 1280 × 720 | Video thumbnail |
 | poster-a4.svg | 794 × 1123 | A4-proportioned digital poster |
-| copy.md | — | Website, launch, social, email, ad and video copy |
-| brand-guide.md | — | Palette, typography, tone and logo rules |
-| launch-plan.md | — | Launch checklist and campaign schedule |
+| copy.md | - | Website, launch, social, email, ad and video copy |
+| brand-guide.md | - | Palette, typography, tone and logo rules |
+| launch-plan.md | - | Launch checklist and campaign schedule |
 
 ## Publishing
 

@@ -3,111 +3,178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PlayPort — All-in-one self-hosting platform | Play your way</title>
-<meta name="description" content="Meet PlayPort, an all-in-one self-hosting platform. Game servers and website hosting, in one portable Windows executable. Hosting together. On your terms.">
+<title>PlayPort: game servers and websites in one portable app</title>
+<meta name="description" content="PlayPort is an all-in-one self-hosting platform for Windows. Run Minecraft and Steam game servers, host websites with automatic HTTPS, all from one portable executable. Play your way.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta property="og:title" content="PlayPort — Play your way">
-<meta property="og:description" content="An all-in-one self-hosting platform. Game servers and website hosting, in one portable Windows executable.">
+<link rel="stylesheet" href="assets/site.css">
+<meta property="og:title" content="PlayPort: play your way">
+<meta property="og:description" content="An all-in-one self-hosting platform for Windows. Game servers and websites in one portable executable.">
 <meta property="og:image" content="assets/social-card-1200x630.svg">
-<style>
-*{box-sizing:border-box}
-:root{--bg:#10101c;--panel:#191522;--line:#393044;--ink:#f5f5fa;--muted:#c8bfdc;--lime:#a2ef00;--violet:#872bff}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
-a{color:var(--lime);text-underline-offset:4px}
-.wrap{max-width:1080px;margin:auto;padding:0 24px}
-header{position:sticky;top:0;background:rgba(16,16,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-.nav{display:flex;align-items:center;gap:20px;padding:14px 0}
-.nav img{height:40px;display:block}
-.nav .sp{margin-left:auto}
-.nav a{color:var(--ink);text-decoration:none;font-size:15px}
-.nav a:hover{color:var(--lime)}
-.btn{display:inline-block;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:bold;border:1px solid var(--lime)}
-.btn.primary{background:var(--lime);color:#0d1305}
-.btn.ghost{background:transparent;color:var(--lime)}
-.hero{padding:72px 0 48px}
-.eyebrow{color:var(--lime);font-size:12px;letter-spacing:.18em;font-weight:bold;text-transform:uppercase}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.03;margin:16px 0}
-h1 span{color:var(--lime)}
-.hero p{color:var(--muted);max-width:660px;font-size:19px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.shot{margin:44px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
-.shot img{display:block;width:100%}
-.shot figcaption{padding:12px 18px;color:var(--muted);font-size:14px}
-h2{font-size:clamp(26px,4vw,38px);margin:56px 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;margin-top:24px}
-.card{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:20px}
-.card h3{margin:0 0 8px;font-size:17px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.dl{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:24px}
-.ok{color:var(--lime);font-weight:bold}
-.note{border-left:3px solid var(--violet);background:var(--panel);border-radius:0 10px 10px 0;padding:14px 20px;color:var(--muted);margin-top:18px}
-footer{margin-top:64px;border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
-footer a{color:var(--muted)}
-</style>
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<header>
+
+<header class="site">
   <div class="wrap nav">
-    <a href="#top"><img src="assets/wordmark-transparent.svg" alt="PlayPort"></a>
-    <span class="sp"></span>
-    <a href="#features">Features</a>
-    <a href="#download">Download</a>
-    <a href="docs/operator-manual.md">Manual</a>
-    <a href="marketing/">Brand kit</a>
+    <a class="brand" href="#top"><img src="assets/wordmark-transparent.svg" alt="PlayPort"></a>
+    <nav class="links">
+      <a class="link" href="#features">Features</a>
+      <a class="link" href="#screens">Screenshots</a>
+      <a class="link" href="demo.html">Live demo</a>
+      <a class="link" href="#faq">FAQ</a>
+      <a class="link" href="docs/">Manual</a>
+      <a class="dl-btn" href="download/PlayPort.exe" download>Download</a>
+    </nav>
   </div>
 </header>
 
 <main id="top" class="wrap">
+
   <section class="hero">
     <div class="eyebrow">All-in-one self-hosting platform</div>
     <h1>Play your<br><span>way</span></h1>
-    <p>Meet PlayPort, an all-in-one self-hosting platform. Bring your hosting together in one place, on your terms. Play your way.</p>
+    <p class="lead">Meet PlayPort, an all-in-one self-hosting platform. Bring your hosting together in one place, on your terms.</p>
     <div class="cta">
       <a class="btn primary" href="download/PlayPort.exe" download>Download for Windows</a>
-      <a class="btn ghost" href="#features">See it in action</a>
+      <a class="btn ghost" href="demo.html">Try the demo</a>
+      <a class="btn ghost" href="docs/">Read the manual</a>
     </div>
   </section>
 
   <figure class="shot">
-    <img src="marketing/shots/p4/first-run.png" alt="PlayPort first-run screen">
-    <figcaption>The panel, first run — create your admin account and add your first server or website.</figcaption>
+    <img src="marketing/shots/p4/first-run.png" alt="The PlayPort panel on first run, showing the setup screen">
+    <figcaption>The panel on first run. Create your admin account, then add your first server or website.</figcaption>
   </figure>
 
   <section id="features">
-    <h2>Hosting together. On your terms.</h2>
-    <p style="color:var(--muted);max-width:760px">Game servers and websites, managed from one portable executable. No install, no runtime to ship, no external database.</p>
+    <h2>Everything in one window</h2>
+    <p class="section-lead">Game servers and websites, managed from a single portable executable. No installer, no runtime to ship, no external database.</p>
     <div class="grid">
-      <article class="card"><h3>Minecraft servers</h3><p>Vanilla and Paper, with automatic downloads and updates from Mojang and PaperMC.</p></article>
-      <article class="card"><h3>Steam games</h3><p>Boots SteamCMD for you — installs and updates dedicated servers with live progress and update timers.</p></article>
-      <article class="card"><h3>Website hosting</h3><p>Static, PHP/FastCGI and reverse-proxy sites, each on its own port with its own file manager.</p></article>
-      <article class="card"><h3>Automatic HTTPS</h3><p>One-click Let's Encrypt with a built-in ACME client, self-signed certs for LAN use, or your own PFX.</p></article>
-      <article class="card"><h3>Cloudflare tunnels</h3><p>A temporary public URL with no account and no open ports, or named tunnels for stable hostnames.</p></article>
-      <article class="card"><h3>One folder, portable</h3><p>Everything lives in a <code>playport-data/</code> folder beside the exe. Delete it to uninstall completely.</p></article>
+      <article class="card"><h3>Minecraft servers</h3><p>Vanilla and Paper, with automatic downloads and version updates straight from Mojang and PaperMC.</p></article>
+      <article class="card"><h3>Steam game servers</h3><p>Boots SteamCMD for you to install and update dedicated servers, with live download progress and update timers.</p></article>
+      <article class="card"><h3>Website hosting</h3><p>Static, PHP/FastCGI and reverse-proxy sites. Each one runs on its own port with its own file manager.</p></article>
+      <article class="card"><h3>Automatic HTTPS</h3><p>One click for a real Let's Encrypt certificate with a built-in ACME client, a self-signed certificate for LAN use, or your own PFX.</p></article>
+      <article class="card"><h3>Cloudflare tunnels</h3><p>Share a site on a temporary public URL with no account and no open ports, or set up named tunnels for stable hostnames.</p></article>
+      <article class="card"><h3>Backups that leave the machine</h3><p>Choose exactly what a backup contains, then copy it to a folder, a share, or an S3-compatible bucket such as Cloudflare R2 or Backblaze B2.</p></article>
+      <article class="card"><h3>Databases on tap</h3><p>A managed MariaDB server, with an isolated database and user for any site or game server in one click.</p></article>
+      <article class="card"><h3>One portable folder</h3><p>Everything lives in a <code>playport-data/</code> folder beside the app. Delete the folder to uninstall completely.</p></article>
+    </div>
+  </section>
+
+  <section id="screens">
+    <h2>See it in action</h2>
+    <p class="section-lead">Real captures from the panel. Or open the <a href="demo.html">interactive demo</a> and click around a simulated panel in your browser.</p>
+    <div class="gallery">
+      <figure>
+        <img src="marketing/shots/p4/install-1.png" alt="Installing a Minecraft server" loading="lazy">
+        <figcaption>Install a Minecraft server: pick a version, accept the EULA, and PlayPort downloads and sets it up.</figcaption>
+      </figure>
+      <figure>
+        <img src="marketing/shots/p4/install-2.png" alt="Server install progress" loading="lazy">
+        <figcaption>Live progress while files download and unpack, with every job tracked on the Activity page.</figcaption>
+      </figure>
+      <figure>
+        <img src="marketing/shots/p4/first-run.png" alt="The panel on first run" loading="lazy">
+        <figcaption>First run: create the admin account, then the panel is ready to use straight away.</figcaption>
+      </figure>
+      <figure>
+        <img src="marketing/shots/p4/uninstall.png" alt="Uninstall screen" loading="lazy">
+        <figcaption>Uninstall is just deleting the <code>playport-data/</code> folder. Nothing is left behind on your system.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="demo">
+    <h2>Try the demo</h2>
+    <p class="section-lead">Not ready to download? The demo is a simulated panel that runs in your browser. Same layout, same screens, nothing to install.</p>
+    <div class="cta">
+      <a class="btn primary" href="demo.html">Open the interactive demo</a>
+      <a class="btn ghost" href="docs/">Read the manual first</a>
     </div>
   </section>
 
   <section id="download">
     <h2>Download</h2>
-    <div class="dl">
-      <p style="margin-top:0"><strong>PlayPort.exe</strong> — portable, Windows 10/11, no install.</p>
+    <div class="dl-box">
+      <p style="margin-top:0"><strong>PlayPort.exe</strong>: portable, Windows 10 and 11, no install. About 6 MB, and it needs the .NET Framework that already ships with Windows.</p>
       <div class="cta" style="margin-top:12px">
         <a class="btn primary" href="download/PlayPort.exe" download>Download PlayPort.exe</a>
         <a class="btn ghost" href="download/PlayPort.exe.sha256">SHA-256 checksum</a>
-        <a class="btn ghost" href="docs/operator-manual.md">Read the manual</a>
+        <a class="btn ghost" href="docs/">Read the manual</a>
       </div>
-      <div class="note">
-        <p style="margin:0"><span class="ok">Not code-signed.</span> Signing certificates are a paid service this release does not carry, so Windows may warn on first run. That is expected — see <a href="DISCLAIMER.md">DISCLAIMER.md</a> for how to proceed and how to verify the file.</p>
+      <div class="note warn">
+        <p style="margin:0 0 8px"><span class="ok">Not code-signed.</span> A signing certificate is a paid service this release does not carry, so Windows may warn you the first time you run the file. That is expected.</p>
+        <p style="margin:0">See the <a href="DISCLAIMER.md">disclaimer</a> for exactly what to click and how to verify the download against its checksum.</p>
       </div>
+      <p class="hash" style="margin:16px 0 0">SHA-256: 1c8177ed0e1a6fe06cc8815fc713ff447ed9c29914a154969ed90a4cf578322d</p>
     </div>
   </section>
+
+  <section id="faq">
+    <h2>Questions</h2>
+
+    <details class="faq">
+      <summary>Do I need to install anything?</summary>
+      <p>No. PlayPort is a single executable that runs on Windows 10 and 11. Double-click it and it opens in your browser at <code>http://127.0.0.1:8080/</code>. It uses the .NET Framework that already ships with Windows.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Windows said the publisher is unknown. Is something wrong?</summary>
+      <p>No. The build is not code-signed, so SmartScreen warns about it. Click <strong>More info</strong>, then <strong>Run anyway</strong>. You can confirm you downloaded the real file by comparing its SHA-256 hash with the one above, or with the file in the repository.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Where does my data go?</summary>
+      <p>Everything lives in a <code>playport-data/</code> folder next to the executable: settings, websites, game servers, databases and backups. Delete that folder and PlayPort is fully uninstalled. If the folder it is in is not writable, it falls back to <code>%LOCALAPPDATA%\PlayPort</code>.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Can people reach my servers from the internet?</summary>
+      <p>Yes. Forward the ports you want on your router and open the matching ports in Windows Firewall, or use a built-in Cloudflare tunnel to get a public URL without touching your router at all. The manual walks through both.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Does it work on Linux or macOS?</summary>
+      <p>Not yet. This release targets Windows. The panel offers a phone-friendly layout, so you can manage it from a phone on the same network.</p>
+    </details>
+
+    <details class="faq">
+      <summary>Is PlayPort open source?</summary>
+      <p>No. PlayPort is proprietary software, all rights reserved. The source is not published. See the <a href="LICENSE">licence</a>.</p>
+    </details>
+  </section>
+
 </main>
 
-<footer>
+<footer class="site">
   <div class="wrap">
-    <p style="margin:0 0 8px">PlayPort — an all-in-one self-hosting platform. Hosting together. On your terms.</p>
-    <p style="margin:0"><a href="LICENSE">Licence</a> · <a href="DISCLAIMER.md">Disclaimer</a> · <a href="docs/operator-manual.md">Manual</a> · <a href="marketing/">Brand kit</a> · Copyright © 2026 Joshua van Doorn, trading as PlayPort. All rights reserved.</p>
+    <div class="cols">
+      <div>
+        <h4>PlayPort</h4>
+        <p style="margin:0">An all-in-one self-hosting platform.<br>Hosting together. On your terms.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="download/PlayPort.exe" download>Download</a></li>
+          <li><a href="demo.html">Interactive demo</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="docs/">Manual</a></li>
+          <li><a href="DISCLAIMER.md">Disclaimer</a></li>
+          <li><a href="LICENSE">Licence</a></li>
+          <li><a href="marketing/">Brand kit</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin:28px 0 0">Copyright &copy; 2026 Joshua van Doorn, trading as PlayPort. All rights reserved.</p>
   </div>
 </footer>
+
 </body>
 </html>

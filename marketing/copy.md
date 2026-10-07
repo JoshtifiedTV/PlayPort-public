@@ -16,7 +16,7 @@ Replace bracketed fields before publication. Choose “Explore” for a live pro
 
 **About:** PlayPort is an all-in-one self-hosting platform built around your freedom to host your way. From game servers to websites, bring your hosting together in one place. For personal projects and communities alike: Play your way.
 
-**Search title:** PlayPort — All-in-One Self-Hosting Platform  
+**Search title:** PlayPort - All-in-One Self-Hosting Platform  
 **Search description:** Meet PlayPort, an all-in-one self-hosting platform. Play your way. Hosting together. On your terms.
 
 ## Launch announcement
@@ -32,7 +32,7 @@ Explore: [PRODUCT_URL]
 Questions or feedback? [CONTACT_EMAIL]
 
 ## Social captions
-### Reveal — square graphic
+### Reveal: square graphic
 Play your way
 
 Meet PlayPort: all-in-one self-hosting for your projects and communities.
@@ -40,14 +40,14 @@ Meet PlayPort: all-in-one self-hosting for your projects and communities.
 Take a look → [PRODUCT_URL]
 #PlayPort #GameServers #SelfHosting
 
-### Community — portrait graphic
+### Community: portrait graphic
 The best part of running a server? The people who show up.
 
 PlayPort's goal is simple: hosting on your terms.
 
 Explore the platform → [PRODUCT_URL]
 
-### Short post — link card
+### Short post: link card
 Play your way. Meet PlayPort, an all-in-one self-hosting platform. [PRODUCT_URL]
 
 ### Conversation starter
@@ -63,7 +63,7 @@ We are building PlayPort around a simple goal: hosting on your terms. Tell us wh
 Add a platform-native link sticker pointing to [PRODUCT_URL]. Keep it clear of the controller and headline.
 
 ## Community announcement
-Hey everyone — meet **PlayPort**.
+Hey everyone - meet **PlayPort**.
 
 It is an all-in-one self-hosting platform. Bring your hosting together so you can focus on your projects and communities.
 
@@ -89,7 +89,7 @@ Play your way. Hosting together. On your terms.
 
 Have a question or feedback? Reply to [CONTACT_EMAIL].
 
-— The PlayPort team
+ - The PlayPort team
 
 For marketing sends, use an opted-in list and include your sender identity, postal address and unsubscribe link through your email platform.
 
@@ -114,10 +114,10 @@ For marketing sends, use an opted-in list and include your sender identity, post
 | --- | --- | --- |
 | 0–4s | Controller mark appears on midnight background | Play your |
 | 4–8s | Lime headline, violet rack details | way |
-| 8–15s | Real, current product footage—no mock capability claims | Meet PlayPort. Your all-in-one self-hosting platform. |
+| 8–15s | Real, current product footage - no mock capability claims | Meet PlayPort. Your all-in-one self-hosting platform. |
 | 15–20s | Logo, headline and verified destination | Hosting together. On your terms. Explore PlayPort. |
 
-**Video title:** Meet PlayPort — Play your way  
+**Video title:** Meet PlayPort - Play your way  
 **Description:** Take a look at PlayPort, an all-in-one self-hosting platform. Explore: [PRODUCT_URL]. Questions: [CONTACT_EMAIL].
 
 Use cleared music and footage; do not show secrets, IP addresses, tokens or customer data in recordings.
@@ -126,13 +126,13 @@ Use cleared music and footage; do not show secrets, IP addresses, tokens or cust
 PlayPort is an all-in-one self-hosting platform. Its controller-and-server-rack identity brings a playful spirit to a broader mission: hosting your projects and communities on your terms. Learn more at [PRODUCT_URL]. Media inquiries: [CONTACT_EMAIL].
 
 ## Seven-post rollout
-1. Brand reveal — square graphic and reveal caption.
-2. Community question — conversation-starter copy.
-3. Product introduction — link card and website hero copy.
-4. Actual product walkthrough — video thumbnail and verified footage.
-5. Brand story — explain the controller and server-rack mark.
-6. Community reminder — portrait graphic and community caption.
-7. Recap — story graphic with a live link sticker.
+1. Brand reveal - square graphic and reveal caption.
+2. Community question - conversation-starter copy.
+3. Product introduction - link card and website hero copy.
+4. Actual product walkthrough - video thumbnail and verified footage.
+5. Brand story - explain the controller and server-rack mark.
+6. Community reminder - portrait graphic and community caption.
+7. Recap - story graphic with a live link sticker.
 
 ## Tracking and review
-Use campaign tags on the real destination, for example `?utm_source=discord&utm_medium=community&utm_campaign=playport_reveal` (use `&` if the URL already has a query). Track visits, meaningful product actions and feedback—not just impressions. Check product claims, destination, spelling, image crop and alt text before publishing.
+Use campaign tags on the real destination, for example `?utm_source=discord&utm_medium=community&utm_campaign=playport_reveal` (use `&` if the URL already has a query). Track visits, meaningful product actions and feedback - not just impressions. Check product claims, destination, spelling, image crop and alt text before publishing.
