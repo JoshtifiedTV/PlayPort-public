@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PlayPort demo: a simulated panel you can click around</title>
-<meta name="description" content="An interactive, simulated PlayPort panel. Click through the dashboard, game servers, console, websites and backups without installing anything.">
+<meta name="description" content="An interactive, simulated PlayPort panel. Build a Minecraft network in one click, install the bundled PlayPort Core plugin, watch a live console, host a website and back it all up, without installing anything.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -28,16 +28,17 @@
     <h1 style="font-size:clamp(32px,5vw,54px)">A panel you can click</h1>
     <p class="lead">This is a simulated PlayPort panel running in your browser. Nothing is installed and no servers are real. Click through the screens exactly as you would in the app.</p>
     <div class="note">
-      <p style="margin:0"><strong>Simulated.</strong> The numbers, servers and websites below are made up for the demo. In the real app they are your own.</p>
+      <p style="margin:0"><strong>Simulated.</strong> The numbers, servers, websites and logs below are made up for the demo. In the real app they are your own.</p>
     </div>
   </section>
 
   <div class="demo-steps" id="steps">
-    <button data-step="0" class="active">1. The dashboard</button>
-    <button data-step="1">2. Create a server</button>
-    <button data-step="2">3. Watch the console</button>
-    <button data-step="3">4. Host a website</button>
-    <button data-step="4">5. Back it up</button>
+    <button data-view="dashboard" class="active">1. The dashboard</button>
+    <button data-view="networks">2. One-click network</button>
+    <button data-view="plugins">3. PlayPort Core</button>
+    <button data-view="console">4. Watch the console</button>
+    <button data-view="websites">5. Host a website</button>
+    <button data-view="backups">6. Back it up</button>
   </div>
 
   <div class="demo-shell">
@@ -49,6 +50,8 @@
       <aside class="demo-side" id="nav">
         <div class="demo-logo"><img src="assets/logo-transparent.svg" alt=""><span>PlayPort</span></div>
         <button data-view="dashboard" class="active">Dashboard</button>
+        <button data-view="networks">Minecraft networks</button>
+        <button data-view="plugins">Plugins</button>
         <button data-view="servers">Game servers</button>
         <button data-view="console">Console</button>
         <button data-view="websites">Websites</button>
@@ -73,6 +76,76 @@
           </div>
           <div class="note" style="margin-top:20px">
             <p style="margin:0">System health: <strong>2 warnings</strong>. The Survival world has no backup in the last week, and one website has HTTPS switched off.</p>
+          </div>
+        </div>
+
+        <div class="demo-view" id="view-networks">
+          <h3>Minecraft networks</h3>
+          <p class="sub">A Velocity proxy, a hub, your game servers and an optional limbo lobby, built and wired together in one click.</p>
+          <div class="demo-controls">
+            <button class="go" id="create-network">Create Minecraft network</button>
+          </div>
+          <div class="console" id="net-console" style="display:none;height:170px"></div>
+
+          <div id="network-result" style="display:none;margin-top:18px">
+            <div class="tiles">
+              <div class="tile"><div class="k">Proxy</div><div class="v" style="font-size:17px">Velocity <small>port 25565</small></div></div>
+              <div class="tile"><div class="k">Hub</div><div class="v" style="font-size:17px">Paper <small>25590</small></div></div>
+              <div class="tile"><div class="k">Game servers</div><div class="v">2 <small>25591, 25592</small></div></div>
+              <div class="tile"><div class="k">Limbo</div><div class="v" style="font-size:17px">NanoLimbo <small>25593</small></div></div>
+            </div>
+            <table class="demo" style="margin-top:16px">
+              <thead><tr><th>Server</th><th>Type</th><th>PlayPort Core</th><th>Port</th></tr></thead>
+              <tbody>
+                <tr><td>hub</td><td>Paper</td><td><span class="pill on">hub</span></td><td>25590</td></tr>
+                <tr><td>Survival</td><td>Paper</td><td><span class="pill on">survival</span></td><td>25591</td></tr>
+                <tr><td>Creative</td><td>Paper</td><td><span class="pill on">creative</span></td><td>25592</td></tr>
+                <tr><td>limbo</td><td>NanoLimbo</td><td><span class="pill off">no plugins</span></td><td>25593</td></tr>
+              </tbody>
+            </table>
+            <div class="note">
+              <p style="margin:0">The hub and every Paper game server came up already running <strong>PlayPort Core</strong>, on the template its name implies. Player forwarding, the shared secret and every proxy config were written for you. Press <strong>Start network</strong> and it brings the backends up first, then the proxy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-view" id="view-plugins">
+          <h3>Plugins: Survival</h3>
+          <p class="sub">Browse the Modrinth catalog, or use the core plugin that ships inside PlayPort.</p>
+          <div class="tile" style="margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap">
+              <div>
+                <div class="v" style="font-size:18px">PlayPort Core <span class="pill on">included</span></div>
+                <div class="k" style="margin-top:4px">A first-party plugin, bundled in the app. Over 90 modules, nothing to buy.</div>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                <select class="field" id="core-profile">
+                  <option value="survival">Profile: Survival</option>
+                  <option value="hub">Profile: Hub / lobby</option>
+                  <option value="creative">Profile: Creative</option>
+                  <option value="skyblock">Profile: Skyblock</option>
+                  <option value="factions">Profile: Factions</option>
+                  <option value="prison">Profile: Prison</option>
+                  <option value="lifesteal">Profile: Lifesteal</option>
+                </select>
+                <button class="go" id="core-install">Install</button>
+              </div>
+            </div>
+          </div>
+          <table class="demo">
+            <thead><tr><th>Profile</th><th>What it turns the server into</th></tr></thead>
+            <tbody>
+              <tr><td>Hub</td><td>A lobby: no survival world, protection and cosmetics for a network entry point.</td></tr>
+              <tr><td>Survival</td><td>Economy, homes, claims, mail and teams for an ordinary survival world.</td></tr>
+              <tr><td>Creative</td><td>Free building: plot protection and the builder tools, no economy.</td></tr>
+              <tr><td>Skyblock</td><td>Island-based play with the modules a skyblock server needs.</td></tr>
+              <tr><td>Factions</td><td>Claims, power, faction chat, a faction TNT bank and raids.</td></tr>
+              <tr><td>Prison</td><td>Mines, ranks, a shop and the grind a prison server is built on.</td></tr>
+              <tr><td>Lifesteal</td><td>PvP hearts you can take, drop and trade back.</td></tr>
+            </tbody>
+          </table>
+          <div class="note" id="core-note" style="display:none">
+            <p style="margin:0">Installed <strong>playport-core-1.0.0.jar</strong> into <strong>Survival</strong>'s plugins folder with the <strong>Survival</strong> profile, straight from inside the app. No download, no account. Restart the server when you are ready.</p>
           </div>
         </div>
 
@@ -205,10 +278,8 @@
   "use strict";
   var nav = document.getElementById("nav");
   var views = document.querySelectorAll(".demo-view");
-  var current = "dashboard";
 
   function show(view) {
-    current = view;
     for (var i = 0; i < views.length; i++) {
       views[i].classList.toggle("active", views[i].id === "view-" + view);
     }
@@ -223,22 +294,68 @@
     if (b) show(b.getAttribute("data-view"));
   });
 
-  /* Guided steps */
+  /* Guided steps: each chip names the view it jumps to. */
   var steps = document.querySelectorAll("#steps button");
   steps.forEach(function (b) {
     b.addEventListener("click", function () {
       steps.forEach(function (x) { x.classList.remove("active"); });
       b.classList.add("active");
-      var s = b.getAttribute("data-step");
-      if (s === "0") show("dashboard");
-      if (s === "1") show("servers");
-      if (s === "2") { document.getElementById("console-title").textContent = "Console: Survival"; clearConsole(); show("console"); }
-      if (s === "3") show("websites");
-      if (s === "4") show("backups");
+      var view = b.getAttribute("data-view");
+      if (view === "console") clearConsole();
+      show(view);
     });
   });
 
-  /* Console simulation */
+  function stamp() {
+    var d = new Date();
+    return "[" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + ":" + String(d.getSeconds()).padStart(2, "0") + "]";
+  }
+
+  /* ---- One-click Minecraft network ---- */
+  var netLog = document.getElementById("net-console");
+  var netLines = [
+    "Resolving the newest Velocity with a stable build from PaperMC",
+    "Downloading velocity-3.x.jar and installing the bridge",
+    "Creating hub (Paper) - PlayPort Core: hub",
+    "Creating Survival (Paper) - PlayPort Core: survival",
+    "Creating Creative (Paper) - PlayPort Core: creative",
+    "Downloading NanoLimbo for the limbo lobby",
+    "Writing a shared forwarding.secret and velocity.toml",
+    "Wiring modern player-info forwarding across the backends",
+    "Network ready - players connect on 25565"
+  ];
+  var netRunning = false;
+  document.getElementById("create-network").addEventListener("click", function () {
+    if (netRunning) return;
+    netRunning = true;
+    netLog.style.display = "block";
+    netLog.innerHTML = "";
+    document.getElementById("network-result").style.display = "none";
+    netLines.forEach(function (t, i) {
+      setTimeout(function () {
+        var d = document.createElement("div");
+        d.textContent = stamp() + " " + t;
+        netLog.appendChild(d);
+        netLog.scrollTop = netLog.scrollHeight;
+        if (i === netLines.length - 1) {
+          document.getElementById("network-result").style.display = "block";
+          netRunning = false;
+        }
+      }, 420 * i);
+    });
+  });
+
+  /* ---- PlayPort Core install ---- */
+  document.getElementById("core-install").addEventListener("click", function () {
+    var note = document.getElementById("core-note");
+    var sel = document.getElementById("core-profile");
+    var label = sel.options[sel.selectedIndex].textContent.replace("Profile: ", "");
+    note.innerHTML = "<p style=\"margin:0\">Installed <strong>playport-core-1.0.0.jar</strong> into <strong>Survival</strong>'s plugins folder with the <strong>" +
+      label + "</strong> profile, straight from inside the app. No download, no account. Restart the server when you are ready.</p>";
+    note.style.display = "block";
+  });
+
+  /* ---- Console simulation ---- */
   var cons = document.getElementById("console");
   function line(text, cls) {
     var d = document.createElement("div");
@@ -246,10 +363,6 @@
     d.textContent = text;
     cons.appendChild(d);
     cons.scrollTop = cons.scrollHeight;
-  }
-  function stamp() {
-    var d = new Date();
-    return "[" + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0") + ":" + String(d.getSeconds()).padStart(2, "0") + "]";
   }
   function clearConsole() { cons.innerHTML = ""; line(stamp() + " Server running. Type a command below.", "t"); }
 

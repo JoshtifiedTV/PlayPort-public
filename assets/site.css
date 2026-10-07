@@ -181,6 +181,12 @@ table.demo th { color: var(--muted); font-weight: normal; font-size: 12px; text-
 .console .t { color: #6c6a86; }
 .console .cmd { color: var(--lime); }
 
+select.field {
+  background: var(--panel); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 9px; padding: 9px 12px; font: inherit; font-size: 14px;
+}
+select.field:hover { border-color: var(--lime); }
+
 .demo-controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
 .demo-controls button {
   font: inherit; font-size: 14px; border-radius: 9px; padding: 9px 16px; cursor: pointer;

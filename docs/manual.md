@@ -151,12 +151,30 @@ A **network** is a proxy in front of several Minecraft servers, so players join 
 3. Choose a hub (where players land) and any number of game servers, each with its own port.
 4. Optionally add a limbo lobby, a lightweight holding area for players.
 
-PlayPort writes all the configs (the proxy and every backend), sets up player forwarding, and gives the network a single **Start network** / **Stop network** button. Backends come up first, then the proxy; stopping runs in reverse.
+PlayPort writes all the configs (the proxy and every backend), sets up player forwarding, and gives the network a single **Start network** / **Stop network** button. Backends come up first, then the proxy; stopping runs in reverse. Every Paper backend comes up already running the PlayPort Core plugin, on the template its name implies (a server called `Survival` gets the survival template, a hub gets the hub template).
 
-### Modpacks and plugins
+### PlayPort Core, the bundled plugin
+
+PlayPort Core is a first-party Minecraft plugin that is built into the app, so you do not download it and you do not need an account. The Plugins tab of any Paper or Purpur server shows it at the top with a **profile picker** and an **Install** button, and installation copies the jar straight out of the app into the server's `plugins/` folder.
+
+A **profile** is what turns the one jar into a particular kind of server:
+
+| Profile | What it turns the server into |
+| --- | --- |
+| Hub | A lobby: no survival world, protection and cosmetics for a network entry point. |
+| Survival | Economy, homes, land claims, mail and teams for an ordinary survival world. |
+| Creative | Free building with plot protection and builder tools, no economy. |
+| Skyblock | Island-based play with the modules a skyblock server needs. |
+| Factions | Claims, power, faction chat, a faction TNT bank and raids. |
+| Prison | Mines, ranks, a shop and the grind a prison server is built on. |
+| Lifesteal | PvP hearts you can take, drop and trade back. |
+
+Over ninety modules sit behind those profiles, and nothing in the plugin can be bought: economy, permissions and groups, homes, warps, kits, claims, teams, an auction house, custom enchantments and items, cosmetics, pets, boss arenas, crates, jobs, quests and more. Each one has a switch you can turn on or off from the panel, so you keep the parts you want. A server you create from a starter pack (for example `paper-prison` or `paper-factions`) installs the plugin with the right profile already chosen.
+
+### Modpacks and plugins from Modrinth
 
 - **Modpacks:** the new-server dialog has a **Modpacks** category, fed by Modrinth's public catalog. Pick a pack and a version; PlayPort installs the mods and the right server loader (Fabric, Forge or NeoForge) for you.
-- **Plugins:** Paper and Velocity servers get a **Plugins** tab that browses Modrinth. Search, install and the panel restarts the server for you.
+- **Third-party plugins:** the **Plugins** tab also browses Modrinth's catalog, filtered to the server's own type and Minecraft version so you only see jars that will actually load. Install drops the file into `plugins/`; enable/disable and delete work from the same list, with no filesystem work.
 
 ---
 
