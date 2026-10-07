@@ -1,0 +1,46 @@
+PlayPort - proprietary licence
+Copyright (c) 2026 Joshua van Doorn, trading as PlayPort. All rights reserved.
+
+The copyright holder is Joshua van Doorn, a sole trader established in the
+Netherlands, who trades as PlayPort. "PlayPort" is his trading name.
+
+PlayPort is not open source.
+
+The PlayPort desktop application (PlayPort.exe) and everything built from it -
+the application, the core plugin it carries, the bridge it ships, and the
+templates and profiles it writes - are the exclusive property of the copyright
+holder above.
+
+No part of them may be copied, modified, merged, published, distributed,
+sublicensed or sold, in source or in any built form, except under a written
+licence from the copyright holder. Buying or being given a PlayPort licence
+grants the rights written in that licence and nothing else; it does not grant
+any right in the source.
+
+Running the built plugin and application on a server you operate is not a
+restricted act - that is what they are for.
+
+Third-party material
+
+No third-party code, jar, asset or configuration file is bundled in, linked
+into, or redistributed with PlayPort. Every line of the plugin, the panel and
+the browser UI is written for this project. The third-party products PlayPort
+interoperates with - server plugins it detects, imports from or speaks the
+protocol of, and the server software and plugins it downloads at your request -
+are used as published by their own authors under their own licences, and
+PlayPort ships none of their code. Those downloads happen at your request, from
+the vendor's own release channel.
+
+Third-party names
+
+Where another product's name appears in a shipped artifact, the name is a fact
+about interoperability, not a claim about its code. The full list, with the
+reason for each appearance, is kept by the copyright holder and is available on
+request.
+
+Warranty
+
+To the fullest extent the law allows, PlayPort is provided "as is", without
+warranty of any kind, express or implied, including merchantability, fitness for
+a particular purpose and non-infringement. You run it at your own risk and are
+responsible for backups of your own data.

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img"><title>PlayPort — Play your way</title><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10101c"/><stop offset="1" stop-color="#22103a"/></linearGradient><pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern></defs><rect width="1080" height="1920" fill="url(#bg)"/><rect width="1080" height="1920" fill="url(#grid)"/><path d="M0 0H1080" stroke="#a2ef00" stroke-width="12"/><path d="M0 1920H1080" stroke="#872bff" stroke-width="12"/><text x="70" y="172.79999999999998" fill="#a2ef00" font-family="Arial, Helvetica, sans-serif" font-size="28.08" font-weight="700">PLAYPORT / GAME SERVER CONTROL</text><g transform="translate(216 307.2) scale(2.025)">  <path d="M160 24 H98 V17 H62 V24 H50 V31 H42 V39 H36 V49 H31 V62 H27 V78 H22 V96 H18 V118 H13 V143 H13 V165 H18 V174 H26 V182 H47 V176 H53 V168 H59 V160 H65 V152 H71 V144 H77 V137 H83 V132 H98" fill="none" stroke="#a2ef00" stroke-width="5" stroke-linejoin="miter" stroke-linecap="butt"/>
+  <path d="M160 24 H222 V17 H258 V24 H270 V31 H278 V39 H284 V49 H289 V62 H293 V78 H298 V96 H302 V118 H307 V143 H307 V165 H302 V174 H294 V182 H273 V176 H267 V168 H261 V160 H255 V152 H249 V144 H243 V137 H237 V132 H222" fill="none" stroke="#872bff" stroke-width="5" stroke-linejoin="miter" stroke-linecap="butt"/>
+  <rect x="106" y="34" width="108" height="30" fill="none" stroke="#a2ef00" stroke-width="2"/>
+  <path d="M106 34 H102 V64 H106" fill="none" stroke="#a2ef00" stroke-width="4"/>
+  <path d="M214 34 H218 V64 H214" fill="none" stroke="#872bff" stroke-width="4"/>
+  <rect x="113" y="43" width="26" height="13" fill="#a2ef00"/>
+  <rect x="170" y="46" width="7" height="7" fill="#a2ef00"/>
+  <rect x="184" y="46" width="7" height="7" fill="#a2ef00"/>
+  <rect x="198" y="46" width="7" height="7" fill="#a2ef00"/>
+  <rect x="106" y="72" width="108" height="30" fill="none" stroke="#872bff" stroke-width="2"/>
+  <path d="M106 72 H102 V102 H106" fill="none" stroke="#a2ef00" stroke-width="4"/>
+  <path d="M214 72 H218 V102 H214" fill="none" stroke="#872bff" stroke-width="4"/>
+  <rect x="113" y="81" width="26" height="13" fill="#872bff"/>
+  <rect x="170" y="84" width="7" height="7" fill="#872bff"/>
+  <rect x="184" y="84" width="7" height="7" fill="#872bff"/>
+  <rect x="198" y="84" width="7" height="7" fill="#872bff"/>
+  <rect x="106" y="110" width="108" height="30" fill="none" stroke="#a2ef00" stroke-width="2"/>
+  <path d="M106 110 H102 V140 H106" fill="none" stroke="#a2ef00" stroke-width="4"/>
+  <path d="M214 110 H218 V140 H214" fill="none" stroke="#872bff" stroke-width="4"/>
+  <rect x="113" y="119" width="26" height="13" fill="#a2ef00"/>
+  <rect x="170" y="122" width="7" height="7" fill="#a2ef00"/>
+  <rect x="184" y="122" width="7" height="7" fill="#a2ef00"/>
+  <rect x="198" y="122" width="7" height="7" fill="#a2ef00"/>
+  <rect x="104" y="147" width="112" height="29" fill="none"/>
+  <path d="M102 146 V177 H160" fill="none" stroke="#a2ef00" stroke-width="4"/>
+  <path d="M218 146 V177 H160" fill="none" stroke="#872bff" stroke-width="4"/>
+  <rect x="112" y="152" width="38" height="4" fill="#a2ef00"/>
+  <rect x="169" y="152" width="38" height="4" fill="#872bff"/>
+  <rect x="112" y="159" width="38" height="4" fill="#a2ef00"/>
+  <rect x="169" y="159" width="38" height="4" fill="#872bff"/>
+  <rect x="112" y="166" width="38" height="4" fill="#a2ef00"/>
+  <rect x="169" y="166" width="38" height="4" fill="#872bff"/>
+  <path d="M57 63 H71 V78 H86 V92 H71 V107 H57 V92 H42 V78 H57 Z" fill="#a2ef00" stroke="none" stroke-width="3"/>
+  <path d="M251 60 h10 v3 h3 v10 h-3 v3 h-10 v-3 h-3 v-10 h3 Z" fill="#872bff" stroke="none" stroke-width="2"/>
+  <path d="M268 77 h10 v3 h3 v10 h-3 v3 h-10 v-3 h-3 v-10 h3 Z" fill="#872bff" stroke="none" stroke-width="2"/>
+  <path d="M234 77 h10 v3 h3 v10 h-3 v3 h-10 v-3 h-3 v-10 h3 Z" fill="#872bff" stroke="none" stroke-width="2"/>
+  <path d="M251 94 h10 v3 h3 v10 h-3 v3 h-10 v-3 h-3 v-10 h3 Z" fill="#872bff" stroke="none" stroke-width="2"/></g><text x="70" y="1017.6" fill="#f5f5fa" font-family="Arial, Helvetica, sans-serif" font-size="113.39999999999999" font-weight="700">Play your</text><text x="70" y="1147.2" fill="#a2ef00" font-family="Arial, Helvetica, sans-serif" font-size="113.39999999999999" font-weight="700">way</text><text x="70" y="1440" fill="#c8bfdc" font-family="Arial, Helvetica, sans-serif" font-size="37.800000000000004" font-weight="400">Play your way</text><rect x="70" y="1574.3999999999999" width="626.4" height="97.2" rx="8" fill="#a2ef00"/><text x="97" y="1638.12" fill="#10101c" font-family="Arial, Helvetica, sans-serif" font-size="34.56" font-weight="700">MEET PLAYPORT</text></svg>
