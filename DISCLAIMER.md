@@ -3,7 +3,7 @@
 ## The build is not code-signed
 
 `PlayPort.exe` is **not digitally signed**. Signing certificates are a paid
-service, and this release does not carry one. That single fact is the cause of
+service that this release does not carry. That single fact is the cause of
 every warning below.
 
 ### What Windows may do
@@ -17,18 +17,18 @@ every warning below.
   off is not reversible without resetting Windows, so only do this if you
   understand the trade-off - or run PlayPort on a machine where the policy
   allows it.
-- **Your browser may warn on the download.** The download here is the same file,
-  byte for byte; the SHA-256 checksum beside it (`download/PlayPort.exe.sha256`)
-  lets you confirm that.
+- **Your browser or mail client may warn when you save it.** The checksum that
+  ships with your purchase is the way to confirm the file is the one that was
+  built for release.
 
-### How to verify the download
+### How to verify your copy
 
 ```powershell
 certutil -hashfile PlayPort.exe SHA256
 ```
 
-Compare the result with `download/PlayPort.exe.sha256`. If it matches, you have
-exactly the build this repository published.
+Compare the result with the checksum you received with your purchase. If it
+matches, you have exactly the build that was released.
 
 ## No warranty
 

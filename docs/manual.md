@@ -20,9 +20,9 @@ You do **not** need a database, IIS, nginx, Node.js or Java on the machine. Play
 
 ## Getting started
 
-### 1. Download and run
+### 1. Get PlayPort and run it
 
-1. Grab **PlayPort.exe** from the [download page](../index.html#download).
+1. Get **PlayPort.exe** from your purchase. PlayPort is a paid product, so there is no free download; the [product page](../index.html#download) is where checkout lives.
 2. Put it in the folder you chose.
 3. Double-click it, or run it from a terminal:
 
@@ -327,7 +327,7 @@ PlayPort ships a built-in assistant that helps inside the panel. It answers ques
 
 ### Windows warns that the publisher is unknown
 
-Expected. The build is not code-signed. Click **More info → Run anyway**. On Windows 11, if **Smart App Control** blocks it outright, that setting can be turned off in **Windows Security → App & browser control**; note that turning it off is not reversible without resetting Windows, so only do it if you understand that. To be sure your download is genuine, compare its SHA-256 hash with the published `.sha256` file:
+Expected. The build is not code-signed. Click **More info → Run anyway**. On Windows 11, if **Smart App Control** blocks it outright, that setting can be turned off in **Windows Security → App & browser control**; note that turning it off is not reversible without resetting Windows, so only do it if you understand that. To be sure your copy is the one that was built for release, compare its SHA-256 hash with the checksum you received with your purchase:
 
 ```
 certutil -hashfile PlayPort.exe SHA256

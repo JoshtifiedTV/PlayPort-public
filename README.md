@@ -6,16 +6,21 @@ PlayPort is a self-hosted management panel for game servers **and** website
 hosting, packaged as **one `.exe`** that runs on any Windows 10/11 with **no
 install and no runtime to ship**.
 
-This repository is the **download** for PlayPort: the portable executable, its
-manual, the sales site and the brand kit. It does **not** contain the source,
-which is proprietary and stays private. See [LICENSE](LICENSE).
+This repository is the **product site** for PlayPort: its manual, the sales page
+and the brand kit. It does **not** contain the source, which is proprietary and
+stays private, and it does **not** host the build. PlayPort is sold, so the app
+is delivered to buyers rather than published here. See [LICENSE](LICENSE).
 
 ---
 
-## Download & run
+## Getting your copy
 
-1. Download **[`download/PlayPort.exe`](download/PlayPort.exe)**.
-2. Verify it against **[`download/PlayPort.exe.sha256`](download/PlayPort.exe.sha256)** (optional, see [DISCLAIMER.md](DISCLAIMER.md)).
+PlayPort is a paid product. When you buy it you receive the portable
+`PlayPort.exe` and its SHA-256 checksum; there is no free download, here or
+anywhere else.
+
+1. Get **PlayPort.exe** and its checksum from your purchase.
+2. Optionally verify the checksum (see [DISCLAIMER.md](DISCLAIMER.md)).
 3. Drop it in any writable folder and double-click - or run:
 
    ```
@@ -67,8 +72,6 @@ adding HTTPS, tunnels, backups and troubleshooting.
 
 | Path | What it is |
 | --- | --- |
-| [`download/PlayPort.exe`](download/PlayPort.exe) | The portable build (Windows 10/11) |
-| [`download/PlayPort.exe.sha256`](download/PlayPort.exe.sha256) | SHA-256 checksum of the build |
 | [`docs/manual.md`](docs/manual.md) | The manual (Markdown source) |
 | [`docs/index.html`](docs/index.html) | The manual, rendered for the web |
 | [`index.html`](index.html) | The landing page (also the GitHub Pages home) |

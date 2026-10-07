@@ -190,7 +190,7 @@ const page = `<!doctype html>
       <a class="link" href="../index.html#features">Features</a>
       <a class="link" href="../demo.html">Live demo</a>
       <a class="link" href="../index.html#faq">FAQ</a>
-      <a class="dl-btn" href="../download/PlayPort.exe" download>Download</a>
+      <a class="dl-btn" href="../index.html#download">Buy</a>
     </nav>
   </div>
 </header>

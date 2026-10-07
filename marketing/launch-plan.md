@@ -6,13 +6,13 @@ the schedule as a template rather than a fixed calendar.
 
 ## Before you announce (pre-launch)
 
-- [ ] Decide the download page URL and set `[PRODUCT_URL]` everywhere in
-      [`copy.md`](copy.md).
+- [ ] Decide the store URL and set `[PRODUCT_URL]` everywhere in
+      [`copy.md`](copy.md), including the buy buttons on the site.
 - [ ] Choose the support address and set `[CONTACT_EMAIL]`.
-- [ ] Confirm the release build is the one you are shipping
-      (`download/PlayPort.exe` and its `.sha256`).
-- [ ] Post the download and its [disclaimer](../DISCLAIMER.md) together - the
-      unsigned-build warning should be visible before anyone runs the exe.
+- [ ] Confirm the release build is the one you are selling, and that its
+      `.sha256` goes out with every purchase.
+- [ ] Put the [disclaimer](../DISCLAIMER.md) in front of buyers before they run
+      the exe - the unsigned-build warning should be read, not discovered.
 - [ ] Pick the campaign mode: **Explore** (live product) or **Follow**
       (pre-launch). Do not imply availability that does not exist yet.
 - [ ] Prepare the primary artwork from the kit (square, portrait, story, link

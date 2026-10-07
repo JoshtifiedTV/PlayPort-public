@@ -17,7 +17,7 @@
       <a class="link" href="../index.html#features">Features</a>
       <a class="link" href="../demo.html">Live demo</a>
       <a class="link" href="../index.html#faq">FAQ</a>
-      <a class="dl-btn" href="../download/PlayPort.exe" download>Download</a>
+      <a class="dl-btn" href="../index.html#download">Buy</a>
     </nav>
   </div>
 </header>
@@ -28,7 +28,7 @@
       <h4>On this page</h4>
       <a class="" href="#before-you-start">Before you start</a>
         <a class="" href="#getting-started">Getting started</a>
-        <a class="sub" href="#1-download-and-run">1. Download and run</a>
+        <a class="sub" href="#1-get-playport-and-run-it">1. Get PlayPort and run it</a>
         <a class="sub" href="#2-first-run">2. First run</a>
         <a class="sub" href="#3-add-your-first-thing">3. Add your first thing</a>
         <a class="sub" href="#where-your-data-lives">Where your data lives</a>
@@ -85,8 +85,8 @@
 <p>You do <strong>not</strong> need a database, IIS, nginx, Node.js or Java on the machine. PlayPort downloads and manages what a server or website needs, when it needs it, into its own data folder.</p>
 <hr>
 <h2 id="getting-started">Getting started <a class="anchor" href="#getting-started" aria-label="link to this section">#</a></h2>
-<h3 id="1-download-and-run">1. Download and run <a class="anchor" href="#1-download-and-run" aria-label="link to this section">#</a></h3>
-<ol><li>Grab <strong>PlayPort.exe</strong> from the <a href="../index.html#download">download page</a>.</li><li>Put it in the folder you chose.</li><li>Double-click it, or run it from a terminal:</li></ol>
+<h3 id="1-get-playport-and-run-it">1. Get PlayPort and run it <a class="anchor" href="#1-get-playport-and-run-it" aria-label="link to this section">#</a></h3>
+<ol><li>Get <strong>PlayPort.exe</strong> from your purchase. PlayPort is a paid product, so there is no free download; the <a href="../index.html#download">product page</a> is where checkout lives.</li><li>Put it in the folder you chose.</li><li>Double-click it, or run it from a terminal:</li></ol>
 <p>   ``<code>    PlayPort.exe --open    </code>``</p>
 <p>The panel starts and opens in your browser at <code>http://127.0.0.1:8080/</code>. A small console window also opens and stays open. That window is the panel; closing it stops PlayPort and its servers.</p>
 <blockquote><p>The build is not code-signed, so Windows may warn you the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>. This is explained in the <a href="../DISCLAIMER.md">disclaimer</a>, including how to verify the download against its checksum.</p></blockquote>
@@ -207,7 +207,7 @@ playport-data/       &lt;- settings, websites, servers, databases, backups</code
 <hr>
 <h2 id="troubleshooting">Troubleshooting <a class="anchor" href="#troubleshooting" aria-label="link to this section">#</a></h2>
 <h3 id="windows-warns-that-the-publisher-is-unknown">Windows warns that the publisher is unknown <a class="anchor" href="#windows-warns-that-the-publisher-is-unknown" aria-label="link to this section">#</a></h3>
-<p>Expected. The build is not code-signed. Click <strong>More info → Run anyway</strong>. On Windows 11, if <strong>Smart App Control</strong> blocks it outright, that setting can be turned off in <strong>Windows Security → App &amp; browser control</strong>; note that turning it off is not reversible without resetting Windows, so only do it if you understand that. To be sure your download is genuine, compare its SHA-256 hash with the published <code>.sha256</code> file:</p>
+<p>Expected. The build is not code-signed. Click <strong>More info → Run anyway</strong>. On Windows 11, if <strong>Smart App Control</strong> blocks it outright, that setting can be turned off in <strong>Windows Security → App &amp; browser control</strong>; note that turning it off is not reversible without resetting Windows, so only do it if you understand that. To be sure your copy is the one that was built for release, compare its SHA-256 hash with the checksum you received with your purchase:</p>
 <pre><code>certutil -hashfile PlayPort.exe SHA256</code></pre>
 <h3 id="the-panel-will-not-start-or-the-port-is-in-use">The panel will not start, or the port is in use <a class="anchor" href="#the-panel-will-not-start-or-the-port-is-in-use" aria-label="link to this section">#</a></h3>
 <p>A PlayPort may already be running. The new copy detects it and offers to take over, or you can run <code>PlayPort.exe --stop</code>. If a different program holds the port, change PlayPort's port (<code>PlayPort.exe --port 8081</code>) or the other program's.</p>
