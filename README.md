@@ -1,6 +1,6 @@
 # PlayPort
 
-**Game server + web hosting panel — as a single Windows executable.**
+**Game server + web hosting panel - as a single Windows executable.**
 
 PlayPort is a self-hosted management panel for game servers **plus** website
 hosting, packaged as **one `.exe`** that runs on any Windows 10/11 with **no
