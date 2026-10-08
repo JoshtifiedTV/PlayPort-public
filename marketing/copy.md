@@ -12,7 +12,7 @@ Replace bracketed fields before publication. Choose “Explore” for a live pro
 ## Short descriptions
 **One line:** PlayPort is an all-in-one self-hosting platform. Play your way.
 
-**Short bio:** Play your way. All-in-one self-hosting with PlayPort. [PRODUCT_URL]
+**Short bio:** Play your way. All-in-one self-hosting with PlayPort. https://joshtifiedtv.github.io/PlayPort-public/
 
 **About:** PlayPort is an all-in-one self-hosting platform built around your freedom to host your way. From game servers to websites, bring your hosting together in one place. For personal projects and communities alike: Play your way.
 
@@ -28,8 +28,8 @@ Meet PlayPort: an all-in-one self-hosting platform that puts your hosting in you
 
 Hosting together. On your terms.
 
-Explore: [PRODUCT_URL]
-Questions or feedback? [CONTACT_EMAIL]
+Explore: https://joshtifiedtv.github.io/PlayPort-public/
+Questions or feedback? dregenskill@gmail.com
 
 ## Social captions
 ### Reveal: square graphic
@@ -37,7 +37,7 @@ Play your way
 
 Meet PlayPort: all-in-one self-hosting for your projects and communities.
 
-Take a look → [PRODUCT_URL]
+Take a look → https://joshtifiedtv.github.io/PlayPort-public/
 #PlayPort #GameServers #SelfHosting
 
 ### Community: portrait graphic
@@ -45,10 +45,10 @@ The best part of running a server? The people who show up.
 
 PlayPort's goal is simple: hosting on your terms.
 
-Explore the platform → [PRODUCT_URL]
+Explore the platform → https://joshtifiedtv.github.io/PlayPort-public/
 
 ### Short post: link card
-Play your way. Meet PlayPort, an all-in-one self-hosting platform. [PRODUCT_URL]
+Play your way. Meet PlayPort, an all-in-one self-hosting platform. https://joshtifiedtv.github.io/PlayPort-public/
 
 ### Conversation starter
 What is the one hosting task you would most like to spend less time on?
@@ -60,7 +60,7 @@ We are building PlayPort around a simple goal: hosting on your terms. Tell us wh
 2. way
 3. Meet PlayPort. Hosting together. On your terms.
 
-Add a platform-native link sticker pointing to [PRODUCT_URL]. Keep it clear of the controller and headline.
+Add a platform-native link sticker pointing to https://joshtifiedtv.github.io/PlayPort-public/. Keep it clear of the controller and headline.
 
 ## Community announcement
 Hey everyone - meet **PlayPort**.
@@ -69,7 +69,7 @@ It is an all-in-one self-hosting platform. Bring your hosting together so you ca
 
 **Play your way**
 
-Take a look: [PRODUCT_URL]
+Take a look: https://joshtifiedtv.github.io/PlayPort-public/
 We would love to hear what you think and what you want to see next.
 
 ## Launch email
@@ -87,7 +87,7 @@ Play your way. Hosting together. On your terms.
 
 [Explore PlayPort → PRODUCT_URL]
 
-Have a question or feedback? Reply to [CONTACT_EMAIL].
+Have a question or feedback? Reply to dregenskill@gmail.com.
 
  - The PlayPort team
 
@@ -118,12 +118,12 @@ For marketing sends, use an opted-in list and include your sender identity, post
 | 15–20s | Logo, headline and verified destination | Hosting together. On your terms. Explore PlayPort. |
 
 **Video title:** Meet PlayPort - Play your way  
-**Description:** Take a look at PlayPort, an all-in-one self-hosting platform. Explore: [PRODUCT_URL]. Questions: [CONTACT_EMAIL].
+**Description:** Take a look at PlayPort, an all-in-one self-hosting platform. Explore: https://joshtifiedtv.github.io/PlayPort-public/. Questions: dregenskill@gmail.com.
 
 Use cleared music and footage; do not show secrets, IP addresses, tokens or customer data in recordings.
 
 ## Press / partner blurb
-PlayPort is an all-in-one self-hosting platform. Its controller-and-server-rack identity brings a playful spirit to a broader mission: hosting your projects and communities on your terms. Learn more at [PRODUCT_URL]. Media inquiries: [CONTACT_EMAIL].
+PlayPort is an all-in-one self-hosting platform. Its controller-and-server-rack identity brings a playful spirit to a broader mission: hosting your projects and communities on your terms. Learn more at https://joshtifiedtv.github.io/PlayPort-public/. Media inquiries: dregenskill@gmail.com.
 
 ## Seven-post rollout
 1. Brand reveal - square graphic and reveal caption.

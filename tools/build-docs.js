@@ -190,7 +190,7 @@ const page = `<!doctype html>
       <a class="link" href="../index.html#features">Features</a>
       <a class="link" href="../demo.html">Live demo</a>
       <a class="link" href="../index.html#faq">FAQ</a>
-      <a class="dl-btn" href="../index.html#download">Buy</a>
+      <a class="dl-btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=dregenskill%40gmail.com&amp;item_name=PlayPort%20lifetime%20licence&amp;amount=50.00&amp;currency_code=USD&amp;no_shipping=1&amp;no_note=1">Buy US$50</a>
     </nav>
   </div>
 </header>

@@ -15,11 +15,16 @@ is delivered to buyers rather than published here. See [LICENSE](LICENSE).
 
 ## Getting your copy
 
-PlayPort is a paid product. When you buy it you receive the portable
-`PlayPort.exe` and its SHA-256 checksum; there is no free download, here or
-anywhere else.
+PlayPort costs **US$50**, paid once through PayPal. There is no free download,
+here or anywhere else. The payment link is on the site
+([`index.html`](index.html#download)).
 
-1. Get **PlayPort.exe** and its checksum from your purchase.
+One payment buys a **lifetime licence**: the copy is yours to keep and run, with
+no subscription and no expiry. **Update requests are honoured for a limited
+time** after purchase; when that window closes, the version you hold keeps
+working as it does today. The full terms are in the [LICENSE](LICENSE).
+
+1. Get **PlayPort.exe** and its SHA-256 checksum from your purchase.
 2. Optionally verify the checksum (see [DISCLAIMER.md](DISCLAIMER.md)).
 3. Drop it in any writable folder and double-click - or run:
 

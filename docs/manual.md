@@ -22,7 +22,7 @@ You do **not** need a database, IIS, nginx, Node.js or Java on the machine. Play
 
 ### 1. Get PlayPort and run it
 
-1. Get **PlayPort.exe** from your purchase. PlayPort is a paid product, so there is no free download; the [product page](../index.html#download) is where checkout lives.
+1. Get **PlayPort.exe** from your purchase. PlayPort costs **US$50**, paid once through PayPal on the [product page](../index.html#download); there is no free download.
 2. Put it in the folder you chose.
 3. Double-click it, or run it from a terminal:
 
@@ -363,9 +363,16 @@ If you want to keep your worlds or website files, copy them out of `playport-dat
 
 ---
 
-## Licence and warranty
+## Licence, purchase terms and warranty
 
 PlayPort is proprietary software. Copyright © 2026 Joshua van Doorn, trading as PlayPort. All rights reserved. See the [LICENSE](../LICENSE).
+
+### What US$50 buys
+
+- **A lifetime licence.** One payment, a copy that is yours to keep and run for as long as you like: no subscription, no expiry and no per-server fee.
+- **Limited-time update requests.** For a limited period after purchase you can ask for fixes and improvements. When that window closes, the version you hold keeps working exactly as it does today; it does not stop or degrade.
+
+### Warranty
 
 It is provided as is, without warranty of any kind. It manages servers and can move or overwrite world files, so keep backups. You are responsible for your own data.
 
